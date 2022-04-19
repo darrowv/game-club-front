@@ -1,5 +1,4 @@
 import React from "react";
-import Carts from "./carts/Carts";
 import Header from "./Header";
 
 const Main = () => {
