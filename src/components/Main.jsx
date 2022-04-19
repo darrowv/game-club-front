@@ -7,7 +7,6 @@ const Main = () => {
     <>
       <Header />
       <div className="container"></div>
-      <Carts />
     </>
   );
 };
