@@ -41,4 +41,100 @@ header {
   display: flex;
   justify-content: space-between;
   line-height: 90px;
+  font-size: 22px;
+}
+
+.link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.signIn {
+  width: 150px;
+  height: 60px;
+  text-align: center;
+  box-shadow: 0px 2px 10px rgb(255 20 161 / 60%);
+  border: 3px solid #ff14a1;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  background: rgba(177, 66, 145, 0.5);
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+.titleImg {
+  margin-top: 30px;
+}
+
+.flexTitle {
+  display: flex;
+  padding-top: 20px;
+}
+
+.titleText {
+  margin-left: 150px;
+  margin-top: 50px;
+}
+
+h1 {
+  color: #fff;
+  font-size: 60px;
+}
+
+.titleBtn {
+  width: 350px;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  box-shadow: 0px 2px 10px rgb(255 20 161 / 60%);
+  border: 3px solid #ff14a1;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  background: rgba(177, 66, 145, 0.5);
+  padding: 18px;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+.buttons {
+  width: 720px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.map {
+  width: 720px;
+  margin-top: 20px;
+}
+
+.map img {
+  border-radius: 5px;
+}
+
+.flexQuesion {
+  width: 900px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: gray;
+  padding: 15px;
+}
+
+.answer {
+  width: 900px;
+  margin: auto;
+  padding: 10px 20px;
+  background-color: lightgray;
+}
+
+.block {
+  margin-top: 10px;
+}
+
+.questionsSection {
+  background-color: #ed37a4;
+  padding-top: 20px;
 }
