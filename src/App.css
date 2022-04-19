@@ -50,6 +50,15 @@ main {
   color: #fff;
 }
 
+.signIn {
+  width: 150px;
+  height: 50px;
+}
+
+.titleImg {
+  margin-top: 30px;
+}
+
 .flexTitle {
   display: flex;
   padding-top: 20px;
@@ -78,18 +87,21 @@ h1 {
   background: rgba(177, 66, 145, 0.5);
   padding: 18px;
   color: #FFFFFF;
+  border-radius: 5px;
 }
 
 .buttons {
   width: 720px;
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .map {
   width: 720px;
-  height: 400px;
   margin-top: 20px;
-  background-color: #fff;
+}
+
+.map img {
+  border-radius: 5px;
 }
