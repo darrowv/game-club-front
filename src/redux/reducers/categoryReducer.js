@@ -1,16 +1,15 @@
 const initialState = {
-  category: []
-}
+  category: [],
+};
 
 export const categoryReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'getCats':
+    case "getCats":
       return {
         ...state,
-        category: action.payload
-      }
+        category: action.payload,
+      };
     default:
       return state;
   }
-}
-
+};

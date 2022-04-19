@@ -33,7 +33,7 @@ const Main = () => {
       </main>
       <Stock />
       <section className="questionsSection">
-        <h2 style={{textAlign: 'center'}}>Частые вопросы</h2>
+        <h2 style={{ textAlign: "center" }}>Частые вопросы</h2>
         <Questions
           question="Есть ли возрастное ограничение?"
           answer="Ворзарстного ограничения нет"

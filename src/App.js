@@ -1,8 +1,8 @@
-import { Provider } from 'react-redux';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './App.css';
-import Main from './components/Main';
-import { store } from './redux/configureStore';
+import { Provider } from "react-redux";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Main from "./components/Main";
+import { store } from "./redux/configureStore";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Provider store={store}>
         <BrowserRouter>
           <Routes>
-            <Route path='/' element={<Main />} />
+            <Route path="/" element={<Main />} />
           </Routes>
         </BrowserRouter>
       </Provider>

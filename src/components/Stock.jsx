@@ -11,17 +11,11 @@ const Stock = () => {
           className="promo__image"
           alt="stock"
         />
-        <div className="promo__details" >
-          <h3 className="promo__title">
-            Супер цены на Bootcamp
-          </h3>
+        <div className="promo__details">
+          <h3 className="promo__title">Супер цены на Bootcamp</h3>
 
-          <div
-            className="promo__description promo__description_description-outer"
-          >
-            <div
-              className="promo__description promo__description_description-inner"
-            >
+          <div className="promo__description promo__description_description-outer">
+            <div className="promo__description promo__description_description-inner">
               Новые суперкомпы на базе RTX 3060 + монитор 280 Hz. Ночь всего за
               750 р.
             </div>
