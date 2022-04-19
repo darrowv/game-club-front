@@ -7,6 +7,7 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Roboto';
 }
 
 h1, h2, h3, h4, p, ul, li, span {
@@ -22,10 +23,17 @@ h1, h2, h3, h4, p, ul, li, span {
 
 header {
   width: 100%;
-  height: 70px;
+  height: 90px;
   margin: auto;
   align-items: center;
   background-color: black;
+}
+
+main {
+  width: 100%;
+  height: 1000px;
+  background-color: gray;
+  background: linear-gradient(#700D63 0%, #ED37A4 73.44%)
 }
 
 .list {
@@ -33,5 +41,55 @@ header {
   margin: auto;
   display: flex;
   justify-content: space-between;
-  line-height: 70px;
+  line-height: 90px;
+  font-size: 22px;
+}
+
+.link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.flexTitle {
+  display: flex;
+  padding-top: 20px;
+}
+
+.titleText {
+  margin-left: 150px;
+  margin-top: 50px;
+}
+
+h1 {
+  color: #fff;
+  font-size: 60px;
+}
+
+.titleBtn {
+  width: 350px;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  box-shadow: 0px 2px 10px rgb(255 20 161 / 60%);
+  border: 3px solid #FF14A1;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  background: rgba(177, 66, 145, 0.5);
+  padding: 18px;
+  color: #FFFFFF;
+}
+
+.buttons {
+  width: 720px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.map {
+  width: 720px;
+  height: 400px;
+  margin-top: 20px;
+  background-color: #fff;
 }
