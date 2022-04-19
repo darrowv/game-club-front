@@ -6,11 +6,11 @@ const Header = () => {
     <header>
       <div className="container">
         <ul className="list">
-          <Link to={"/"}>Главня</Link>
-          <Link to={"/"}>Тарифы</Link>
-          <Link to={"/"}>Акции</Link>
-          <Link to={"/"}>Новости</Link>
-          <Link to={"/"}>Контакты</Link>
+          <Link className="link" to={"/"}>Главня</Link>
+          <Link className="link" to={"/"}>Тарифы</Link>
+          <Link className="link" to={"/"}>Акции</Link>
+          <Link className="link" to={"/"}>Новости</Link>
+          <Link className="link" to={"/"}>Контакты</Link>
         </ul>
       </div>
     </header>
