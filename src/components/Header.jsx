@@ -6,6 +6,7 @@ const Header = () => {
     <header>
       <div className="container">
         <div style={{display: 'flex', alignItems: 'center'}}>
+          <span className="logo">LOGO</span>
           <ul className="list">
             <Link className="link" to={"/"}>
               Главная

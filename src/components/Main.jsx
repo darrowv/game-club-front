@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import titleImg from "./img/pubg.png";
 import map from './img/map.png'
+import Stock from './Stock'
 
 const Main = () => {
   return (
@@ -29,6 +30,7 @@ const Main = () => {
           </div>
         </div>
       </main>
+      <Stock />
     </>
   );
 };
