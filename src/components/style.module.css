@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap");
+.mainDivCars {
+  height: 700px;
+  display: flex;
+  justify-content: space-around;
+}
+.imgCarts {
+  width: 360px;
+  height: 300px;
+  background-color: #2a2b30;
+}
+.divCarts {
+  width: 360px;
+  background-color: #2a2b30;
+}
+.divTextCarts {
+  background-color: #2a2b30;
+}
+.oneSpan {
+  margin: 10px;
+  color: #ff8562;
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  font-family: "Roboto", sans-serif;
+}
+.h1Cart {
+  margin: 10px;
+
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.35;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+}
+.textAbout {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 8px;
+  font-family: "Roboto", sans-serif;
+  margin: 10px;
+}
+.about {
+  font-weight: 100;
+  font-family: "Roboto", sans-serif;
+  color: rgba(235, 235, 235, 0.8);
+  margin-bottom: 20px;
+}
+.quantity {
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+}
+.btnCarts {
+  display: inline-block;
+  color: #fff;
+  background-color: #1f5bff;
+  font-weight: 700;
+  text-decoration: none;
+  user-select: none;
+  padding: 0.5em 2em;
+  outline: none;
+  border: none;
+  border-radius: 1px;
+  transition: 0.2s;
+  padding: 15px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: 80px;
+}
+.btnCarts:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.btnCarts:active {
+  background: #1f5bff;
+}
