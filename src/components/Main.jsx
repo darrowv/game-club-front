@@ -4,7 +4,6 @@ import titleImg from "./img/pubg.png";
 import map from "./img/map.png";
 import Stock from "./Stock";
 import Questions from "./Questions";
-import ConfigPage from "./pages/Arsenal/ConfigPage";
 import img from "./img/chat4.png"
 import Carts from "./carts/Carts";
 
