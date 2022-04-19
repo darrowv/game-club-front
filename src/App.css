@@ -120,3 +120,28 @@ h1 {
 .map img {
   border-radius: 5px;
 }
+
+.flexQuesion {
+  width: 900px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: gray;
+  padding: 15px;
+}
+
+.answer {
+  width: 900px;
+  margin: auto;
+  padding: 10px 20px;
+  background-color: lightgray;
+}
+
+.block {
+  margin-top: 10px;
+}
+
+.questionsSection {
+  background-color: #ED37A4;
+  padding-top: 20px;
+}
