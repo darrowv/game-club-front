@@ -15,7 +15,7 @@ const Questions = (props) => {
             <h3>{props.question}</h3>
           </div>
           <div>
-            <button onClick={handleClick}>+</button>
+            <button className="questBtn" onClick={handleClick}>+</button>
           </div>
         </div>
         {active && (
