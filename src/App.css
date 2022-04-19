@@ -155,6 +155,7 @@ h1 {
 .questionsSection {
   background-color: #ED37A4;
   padding-top: 20px;
+  padding-bottom: 80px;
 }
 
 .questionsSection h2 {
@@ -205,6 +206,7 @@ h1 {
   left: 1750px;
   border-radius: 50%;
   background-color: #222426;
+  z-index: 2;
 
 }
 
