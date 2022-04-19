@@ -14,3 +14,24 @@ h1, h2, h3, h4, p, ul, li, span {
   margin: 0;
   text-decoration: none;
 }
+
+.container {
+  width: 1600px;
+  margin: auto
+}
+
+header {
+  width: 100%;
+  height: 70px;
+  margin: auto;
+  align-items: center;
+  background-color: black;
+}
+
+.list {
+  width: 1000px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  line-height: 70px;
+}
