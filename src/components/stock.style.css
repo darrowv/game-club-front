@@ -1,8 +1,8 @@
 @import url("//db.onlinewebfonts.com/c/23a02e8af5ef33a9b496dd524401550f?family=YS+Text+Regular");
 
 .stock {
-  width: 1440px;
   margin: auto;
+  padding-top: 30px;
   height: 600px !important;
   background-color: #222426;
 }
@@ -13,6 +13,7 @@
     margin: auto;
     font-family: "YS Text Regular";
     font-size: 32px;
+    text-align: center;
     color: white;
 }
 .promos__list{
