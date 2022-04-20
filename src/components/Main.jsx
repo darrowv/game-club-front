@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "./Header";
 import titleImg from "./img/pubg.png";
-import map from "./img/map.png";
 import Stock from "./Stock";
 import Questions from "./Questions";
 import img from "./img/chat4.png";
@@ -14,6 +13,7 @@ import img6 from "./img/finding6.svg";
 import "./config.css";
 import "./pages/Arsenal/config.css";
 import Footer from './Footer.jsx'
+import YandMap from "./YandMap";
 
 const Main = () => {
   return (
@@ -34,7 +34,7 @@ const Main = () => {
                 React Redux
               </h1>
               <div className="map">
-                <img style={{ width: "100%" }} src={map} alt="" />
+                <YandMap />
               </div>
               <div className="buttons" style={{ display: "flex" }}>
                 <button className="titleBtn">Перейти к брони</button>
