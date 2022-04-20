@@ -2,8 +2,9 @@ const initialState = {
   signIn: false,
   signUp: false,
   error: null,
-  users: [],
-  token: null,
+  users: {},
+  token: localStorage.getItem("token"),
+  id: localStorage.getItem("id"),
 };
 
 export const applicationReducer = (state = initialState, action) => {
@@ -50,9 +51,39 @@ export const applicationReducer = (state = initialState, action) => {
         signIn: false,
         error: action.error,
       };
+    case "application/users/pending":
+      return {
+        ...state,
+        error: null,
+      };
+    case "application/users/fulfilled":
+      return {
+        ...state,
+        users: action.payload,
+      };
+    case "application/users/rejected":
+      return {
+        ...state,
+        error: action.error,
+      };
     default:
       return state;
   }
+};
+
+export const getUsersById = (id) => {
+  return async (dispatch) => {
+    dispatch({ type: "application/users/pending" });
+
+    const res = await fetch(`http://localhost:6006/users/${id}`);
+    const data = await res.json();
+
+    if (data.error) {
+      dispatch({ type: "application/users/rejected" });
+    } else {
+      dispatch({ type: "application/users/fulfilled", payload: data });
+    }
+  };
 };
 
 export const createApp = (login, password) => {
@@ -94,6 +125,7 @@ export const auth = (login, password) => {
       dispatch({ type: "application/signin/fulfilled", payload: json });
 
       localStorage.setItem("token", json.token);
+      localStorage.setItem("id", json.id);
     }
   };
 };

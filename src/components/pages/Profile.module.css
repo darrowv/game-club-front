@@ -1,0 +1,75 @@
+@font-face {
+  font-family: "CyberPunkFont";
+
+  src: url("./fonts/Cyberpunk-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+.image__profile {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.image__profile:hover {
+  background-color: gray;
+  opacity: 1.5;
+}
+.file__wrapper {
+  height: 700px;
+  margin: auto;
+  text-align: center;
+  background-size: 100%;
+  background-image: url(https://wallpaperaccess.com/full/676037.jpg);
+}
+.file {
+  display: none;
+  height: 50px;
+  width: 10px;
+}
+.file__wrapper p {
+  font-size: 24px;
+  color: #fff;
+  font-weight: 700;
+  margin: 35px;
+  text-align: left;
+}
+
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid black; /* Green */
+  padding: 7px;
+}
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+.animated__word {
+  margin-top: 50px;
+  font-family: Helvetica;
+  letter-spacing: 0.4em;
+  font-weight: 600;
+  font-size: 20px;
+
+  text-align: center;
+  color: #fbef07;
+  cursor: pointer;
+  max-width: 100px;
+  width: 100%;
+  outline: 3px solid;
+  outline-color: rgba(71, 126, 232, 0.5);
+  outline-offset: 70px;
+  transition: all 600ms cubic-bezier(0.2, 0, 0, 0.8);
+}
+.animated__word {
+  border: none;
+  background-color: rgba(71, 126, 232, 0);
+}
+.animated__word:hover {
+  color: rgba(71, 126, 232, 0.7);
+  outline-color: rgba(71, 126, 232, 0);
+  outline-offset: 100px;
+}

@@ -5,7 +5,6 @@ import map from "./img/map.png";
 import Stock from "./Stock";
 import Questions from "./Questions";
 import Carts from "./carts/Carts";
-import PersonalArea from "./pages/PersonalArea";
 
 const Main = () => {
   return (
@@ -30,11 +29,7 @@ const Main = () => {
                 <button className="titleBtn">Позвонить</button>
               </div>
             </div>
-            <div>
-              <button>
-                <PersonalArea />
-              </button>
-            </div>
+            <div></div>
           </div>
         </div>
       </main>

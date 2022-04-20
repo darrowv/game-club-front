@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { auth } from "../../redux/reducers/application";
+import styles from "./signUpIn.module.css";
 
 const SignIn = () => {
   const dispatch = useDispatch();
@@ -20,9 +21,10 @@ const SignIn = () => {
     dispatch(auth(login, password));
   };
   return (
-    <div>
+    <div className={styles.main__div}>
       <div>
         <input
+          className={styles.input1}
           type="text"
           placeholder="type login"
           value={login}
@@ -31,13 +33,16 @@ const SignIn = () => {
       </div>
       <div>
         <input
+          className={styles.input1}
           type="password"
           placeholder="type password"
           value={password}
           onChange={handleChangePassword}
         />
       </div>
-      <button onClick={handleSubmit}>вход</button>
+      <button className={styles.btn} onClick={handleSubmit}>
+        LOGIN
+      </button>
     </div>
   );
 };

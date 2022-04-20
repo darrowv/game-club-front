@@ -2,6 +2,7 @@ import { Provider } from "react-redux";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Main from "./components/Main";
+import PersonalArea from "./components/pages/PersonalArea";
 import SignIn from "./components/pages/SignIn";
 import SignUp from "./components/pages/SignUp";
 import { store } from "./redux/configureStore";
@@ -15,6 +16,7 @@ function App() {
             <Route path="/" element={<Main />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/signin" element={<SignIn />} />
+            <Route path="/profile/:id" element={<PersonalArea />} />
           </Routes>
         </BrowserRouter>
       </Provider>

@@ -1,0 +1,18 @@
+.input1 {
+  width: 250px;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+}
+.main__div {
+  margin: auto;
+  margin-top: 150px;
+  text-align: center;
+}
+.btn {
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid #fbef07;
+  font-size: 20px;
+  width: 250px;
+  color: black;
+}
