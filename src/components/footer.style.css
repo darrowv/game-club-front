@@ -1,13 +1,16 @@
 @import url("//db.onlinewebfonts.com/c/258f25658f1456fd0206d4fb09b637fe?family=AcromW00-Regular");
 .deni__footer {
-  width: 1440px;
+  width: 100%;
   margin: auto;
   height: 460px;
   background-color: #000851;
 }
 .footer__top {
+  width: 1440px;
+  margin: auto;
   padding-top: 70px;
   padding-bottom: 70px;
+
 }
 .deni__wrapper {
   width: 1440px;
