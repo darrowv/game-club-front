@@ -1,0 +1,61 @@
+@import url("//db.onlinewebfonts.com/c/23a02e8af5ef33a9b496dd524401550f?family=YS+Text+Regular");
+
+.stock {
+    margin: auto;
+    padding-top: 30px;
+    height: 600px !important;
+    background-color: #222426;
+}
+
+.deni__stock_title {
+    width: 77.3%;
+    padding-top: 40px !important;
+    margin-bottom: 40px !important;
+    margin: auto;
+    font-family: "YS Text Regular";
+    font-size: 32px;
+    text-align: center;
+    color: white;
+}
+
+.promos__list {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.promo__image {
+    width: 630px;
+    height: 336px;
+    border-radius: 20px 0 0 20px;
+    object-fit: cover;
+}
+
+.promo__details {
+    background-color: #2f3238;
+    padding: 77px 88px;
+    border-radius: 0 20px 20px 0;
+}
+
+.promo__title {
+    color: #d5d6d7;
+    margin-top: 18px;
+    font-family: "YS Text Regular";
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.promo__description {
+    font-size: 17px;
+    width: 340px;
+    color: #b4b4b7;
+    margin-bottom: 40px;
+    font-family: "YS Text Regular";
+}
+
+.promo__date {
+    color: #828998;
+    font-family: "YS Text Regular";
+    font-size: 14px;
+}

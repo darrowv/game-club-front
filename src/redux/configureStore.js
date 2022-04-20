@@ -1,8 +1,8 @@
 import { applyMiddleware, combineReducers, createStore } from "redux";
 import thunk from "redux-thunk";
-import { categoryReducer } from './reducers/categoryReducer'
+import { applicationReducer } from "./reducers/application";
+import { categoryReducer } from "./reducers/categoryReducer";
 
+const combineReducer = combineReducers({ categoryReducer, applicationReducer });
 
-const combineReducer = combineReducers({ categoryReducer })
-
-export const store = createStore(combineReducer, applyMiddleware(thunk))
+export const store = createStore(combineReducer, applyMiddleware(thunk));
