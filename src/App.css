@@ -26,14 +26,17 @@ header {
   height: 90px;
   margin: auto;
   align-items: center;
-  background-color: black;
+  background-color: #222426;
+  position: fixed;
+  opacity: 0.9;
 }
 
 main {
   width: 100%;
   height: 1000px;
   background-color: gray;
-  background: linear-gradient(#700D63 0%, #ED37A4 73.44%)
+  background: linear-gradient(#700D63 0%, #ED37A4 73.44%);
+  padding-top: 70px;
 }
 
 .logo {
@@ -132,6 +135,7 @@ h1 {
   border-radius: 5px;
   color: #fff;
   text-align: center;
+  box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.3)
 }
 
 .answer {
@@ -141,6 +145,7 @@ h1 {
   background-color: lightgray;
   border-radius: 5px;
   margin-top: 5px;
+  box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.2)
 }
 
 .block {
@@ -150,6 +155,21 @@ h1 {
 .questionsSection {
   background-color: #ED37A4;
   padding-top: 20px;
+  padding-bottom: 80px;
+}
+
+.questionsSection h2 {
+  width: 900px;
+  padding-top: 40px !important;
+  margin-bottom: 40px !important;
+  margin: auto;
+  font-family: "YS Text Regular";
+  font-size: 32px;
+  text-align: center;
+  color: #fff;
+  border-bottom: 10px solid purple;
+  padding-bottom: 30px;
+  border-radius: 10px;
 }
 
 .questBtn {
@@ -163,5 +183,35 @@ h1 {
   text-transform: uppercase;
   background: rgba(177, 66, 145, 0.5);
   color: #FFFFFF;
-  border-radius: 5px;
+  border-radius: 50%;
+}
+
+.cardsSection {
+  background-color: #ED37A4;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.itemsSection {
+  background-color: #222426;
+  padding-top: 20px;
+  height: 400px;
+}
+
+.modal {
+  width: 90px;
+  height: 90px;
+  position: fixed;
+  top: 880px;
+  left: 1750px;
+  border-radius: 50%;
+  background-color: #222426;
+  z-index: 2;
+
+}
+
+.modalImg {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
 }
