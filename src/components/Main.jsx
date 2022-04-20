@@ -7,7 +7,6 @@ import Questions from "./Questions";
 import img from "./img/chat4.png";
 import Carts from "./carts/Carts";
 import ConfigPage from "./ConfigPage";
-import ConfigPage from "./pages/Arsenal/ConfigPage";
 import img1 from "./img/finding1.svg";
 import img2 from "./img/finding2.svg";
 import img5 from "./img/finding5.svg";
