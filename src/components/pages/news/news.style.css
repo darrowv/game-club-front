@@ -1,15 +1,16 @@
 .deni__news{
-    width: 1600px;
+    width: 100%;
     padding-top: 100px;
-    height: 1000px;
+    min-height: 1002px;
     margin: auto;
-    background-color: rgb(255, 221, 255);
+    background: linear-gradient(#700D63 0%, #ED37A4 73.44%);
 }
 .deni__news_content{
+    width: 1600px;
+    margin: auto;
     display: flex;
     justify-content: space-between;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 50px 50px 0 50px;
     flex-wrap: wrap;
 }
 .deni__news_content a{
@@ -31,9 +32,13 @@
     height: 350px;
 }
 .news__title{
+    text-align: center;
     font-size: 20px;
     font-weight: 700;
-    color: white;
+    color: #fff;
     letter-spacing: 3px;
     cursor: default;
+    background-color: #222426;
+    padding: 20px 0;
+    border-radius: 10px;
 }

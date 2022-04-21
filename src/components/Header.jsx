@@ -8,6 +8,7 @@ const Header = () => {
   
   const auth = useSelector((state) => state.applicationReducer.signIn);
 
+
   const handleOut = () => {
     if (!auth) {
       localStorage.clear();
@@ -40,7 +41,7 @@ const Header = () => {
             <Link className="link" to={"/"}>
               Контакты
             </Link>
-            <Link className="link" to={`/profile/${id}`}>
+            <Link className="link"  to={`/profile/${id}`} >
               Профиль
             </Link>
           </ul>
