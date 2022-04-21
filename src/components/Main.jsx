@@ -11,10 +11,10 @@ import img5 from "./img/finding5.svg";
 import img6 from "./img/finding6.svg";
 import "./config.css";
 import "./pages/Arsenal/config.css";
+import Footer from './Footer.jsx'
 import Footer from "./Footer.jsx";
 import YandMap from "./YandMap";
 import Chat from "./Chat";
-
 
 const Main = () => {
   return (
