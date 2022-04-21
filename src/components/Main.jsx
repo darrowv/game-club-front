@@ -1,10 +1,8 @@
 import React from "react";
 import Header from "./Header";
 import titleImg from "./img/pubg.png";
-import map from "./img/map.png";
 import Stock from "./Stock";
 import Questions from "./Questions";
-import img from "./img/chat4.png";
 import Carts from "./carts/Carts";
 import ConfigPage from "./ConfigPage";
 import img1 from "./img/finding1.svg";
@@ -13,15 +11,15 @@ import img5 from "./img/finding5.svg";
 import img6 from "./img/finding6.svg";
 import "./config.css";
 import "./pages/Arsenal/config.css";
-import Footer from './Footer.jsx'
+import Footer from "./Footer.jsx";
+import YandMap from "./YandMap";
+import Chat from "./Chat";
 
 const Main = () => {
   return (
     <>
       <Header />
-      <div className="modal">
-        <img className="modalImg" src={img} alt="" />
-      </div>
+      <Chat />
       <main>
         <div className="container">
           <div className="flexTitle">
@@ -34,7 +32,7 @@ const Main = () => {
                 React Redux
               </h1>
               <div className="map">
-                <img style={{ width: "100%" }} src={map} alt="" />
+                <YandMap />
               </div>
               <div className="buttons" style={{ display: "flex" }}>
                 <button className="titleBtn">Перейти к брони</button>
@@ -82,25 +80,26 @@ const Main = () => {
       </section>
       <section className="questionsSection">
         <h2 style={{ textAlign: "center" }}>Частые вопросы</h2>
+        <div className="line"></div>
         <Questions
           question="Есть ли возрастное ограничение?"
           answer="Ворзарстного ограничения нет"
         />
         <Questions
-          question="Есть ли возрастное ограничение?"
-          answer="Ворзарстного ограничения нет"
+          question="Можно ли приходить со своей едой?"
+          answer="Можно приходить как со своей едой, так и приобрести у нас в баре"
         />
         <Questions
-          question="Есть ли возрастное ограничение?"
-          answer="Ворзарстного ограничения нет"
+          question="Где находится ваш клуб?"
+          answer="У нас сеть игровых клубов, подробнее можете посмотреть на карте сайта"
         />
         <Questions
-          question="Есть ли возрастное ограничение?"
-          answer="Ворзарстного ограничения нет"
+          question="Адаптив юй шу сайти?"
+          answer="Адаптив завести ца йин окх к1ирнахь"
         />
         <Questions
-          question="Есть ли возрастное ограничение?"
-          answer="Ворзарстного ограничения нет"
+          question="7 группа рулит?"
+          answer="Это на столько очевидный вопрос, что даже не станем на него отвечать"
         />
       </section>
       <Footer />
