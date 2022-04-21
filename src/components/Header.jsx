@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   const id = useSelector((state) => state.applicationReducer.id);
+  console.log(id);
   return (
     <header>
       <div className="container">
