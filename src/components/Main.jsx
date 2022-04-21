@@ -45,8 +45,6 @@ const Main = () => {
         </div>
       </main>
       <Stock />
-
-      <Carts />
       <section className="cardsSection">
         <Carts />
       </section>

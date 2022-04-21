@@ -35,6 +35,7 @@ const Carts2 = () => {
         </div>
       </div>
     </div>
+    </div>
   );
 };
 
