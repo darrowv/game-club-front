@@ -3,7 +3,19 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+
   const id = useSelector((state) => state.applicationReducer.id);
+  
+  const auth = useSelector((state) => state.applicationReducer.signIn);
+
+  const handleOut = () => {
+    if (!auth) {
+      localStorage.clear();
+    }
+  };
+
+  const logText = auth ? "ВОЙТИ" : "ВЫЙТИ";
+
   return (
     <header>
       <div className="container">
@@ -33,7 +45,9 @@ const Header = () => {
             </Link>
           </ul>
           <Link to={"/signin"}>
-            <button className="signIn">Войти</button>
+            <button onClick={handleOut} className="signIn">
+              {logText}
+            </button>
           </Link>
         </div>
       </div>

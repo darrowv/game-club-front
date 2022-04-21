@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { getUsersById } from "../../redux/reducers/application";
+import { getUsersById, handleImage } from "../../redux/reducers/application";
 import Header from "../Header";
 import styles from "./Profile.module.css";
 
@@ -9,23 +9,16 @@ const PersonalArea = () => {
   const { id } = useParams();
 
   const users = useSelector((state) => state.applicationReducer.users);
-
   const dispatch = useDispatch();
   const [file, setFile] = useState("");
+  console.log(users);
+
   useEffect(() => {
     dispatch(getUsersById(id));
   }, [dispatch]);
 
-  const handleImage = async () => {
-    const formData = new FormData();
-    formData.append("avatar", file);
-
-    const res = await fetch(`http://localhost:6006/image/${users._id}`, {
-      method: "PATCH",
-      body: formData,
-    });
-    const data = res.json();
-    dispatch({ type: "add/image", payload: data });
+  const handleClick = () => {
+    dispatch(handleImage(users._id, file));
   };
 
   return (
@@ -38,7 +31,6 @@ const PersonalArea = () => {
             <div>
               <div>
                 <label for="upload_photo">
-                  {" "}
                   <img
                     className={styles.image__profile}
                     src={`http://localhost:6006/${users.image}`}
@@ -50,18 +42,10 @@ const PersonalArea = () => {
                     onChange={(e) => setFile(e.target.files[0])}
                   />
                 </label>
-
-                {/* 
-              <button className={styles.button1} onClick={handleClick}>
-                Изменить фото
-              </button> */}
               </div>
 
               <div className={styles.container}>
-                <button
-                  className={styles.animated__word}
-                  onCHange={handleImage}
-                >
+                <button className={styles.animated__word} onClick={handleClick}>
                   GAME
                 </button>
               </div>
