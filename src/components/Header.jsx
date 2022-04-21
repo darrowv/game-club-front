@@ -1,7 +1,9 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  const id = useSelector((state) => state.applicationReducer.id);
   return (
     <header>
       <div className="container">
@@ -14,6 +16,9 @@ const Header = () => {
             <Link className="link" to={"/"}>
               Тарифы
             </Link>
+            <Link className="link" to={"/cafe"}>
+              Бар
+            </Link>
             <Link className="link" to={"/"}>
               Акции
             </Link>
@@ -23,8 +28,13 @@ const Header = () => {
             <Link className="link" to={"/"}>
               Контакты
             </Link>
+            <Link className="link" to={`/profile/${id}`}>
+              Профиль
+            </Link>
           </ul>
-          <button className="signIn">Войти</button>
+          <Link to={"/signin"}>
+            <button className="signIn">Войти</button>
+          </Link>
         </div>
       </div>
     </header>

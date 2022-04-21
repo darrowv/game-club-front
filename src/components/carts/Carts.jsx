@@ -5,7 +5,7 @@ import Carts3 from "./Carts3";
 
 const Carts = () => {
   return (
-    <div style={{ marginTop: "50px"}}>
+    <div style={{ marginTop: "50px" }}>
       <div style={{ display: "flex" }} className={styles.mainDivCars}>
         <div className={styles.divCarts}>
           <div>

@@ -10,7 +10,6 @@
   width: 360px;
   height: 300px;
   background-color: #2a2b30;
-  border-radius: 5px;
 }
 .divCarts {
   width: 380px;
@@ -18,6 +17,7 @@
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 0 8px 3px
+
 }
 .divTextCarts {
   background-color: #2a2b30;
@@ -58,6 +58,28 @@
   font-family: "Roboto", sans-serif;
 }
 .btnCarts {
+  display: inline-block;
+  color: #fff;
+  background-color: #1f5bff;
+  font-weight: 700;
+  text-decoration: none;
+  user-select: none;
+  padding: 0.5em 2em;
+  outline: none;
+  border: none;
+  border-radius: 1px;
+  transition: 0.2s;
+  padding: 15px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: 80px;
+}
+.btnCarts:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.btnCarts:active {
+  background: #1f5bff;
+}
   width: 300px;
   height: 40px;
   margin: auto;
