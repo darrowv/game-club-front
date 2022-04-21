@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+.barHeader {
+  align-items: center;
+  display: flex;
+}
+
+.barInput {
+  width: 400px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #FF14A1;
+  box-shadow: 0 0 8px 3px rgba(105, 104, 104, 0.1);
+  margin-left: 325px;
+  outline: none;
+}
+
+.cardsMain {
+  width: 1500px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 75px;
+}
+
+.imgBlock {
+  width: 250px;
+  height: 250px;
+  text-align: center;
+}
+
+.barCard {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 15px;
+  margin-top: 50px;
+  border-radius: 15px;
+  margin-right: 50px;
+  background-color: rgb(248, 217, 222);
+  padding: 10px;
+  box-shadow: 0 0 8px 3px rgba(105, 104, 104, 0.1);
+  transition: 0.4s;
+}
+
+.barCard:hover {
+  border: 1px solid rgba(105, 104, 104, 0.1);
+  box-shadow: 0 0 8px 3px rgba(105, 104, 104, 0.1);
+  transform: scale(1.06);
+}
+
+.bar_h3 {
+  margin-left: 10px;
+  padding-bottom: 5px;
+}
+
+.barIcons {
+  width: 250px;
+  border-radius: 10px;
+
+}
+
+.aboutSneak {
+  padding-left: 10px;
+}
+
+.aboutSneak button {
+  margin-left: 5px;
+  width: 220px;
+  height: 40px;
+  box-shadow: 0px 2px 10px rgb(255 20 161 / 60%);
+  border: 1px solid #FF14A1;
+  text-transform: uppercase;
+  background: rgba(177, 66, 145, 0.5);
+  color: #FFFFFF;
+  border-radius: 5px;
+}
+
+.barContant {
+  width: 1400px;
+  margin: auto;
+}
+
+.aboutSneak p {
+  padding-bottom: 5px;
+}
+
+.barFind {
+  width: 120px;
+  height: 40px;
+  box-shadow: 0px 2px 10px rgb(255 20 161 / 60%);
+  border: 1px solid #FF14A1;
+  text-transform: uppercase;
+  background: rgba(177, 66, 145, 0.5);
+  color: #FFFFFF;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.barFind:hover {
+  background-color: #fff;
+  color: #FF14A1;
+  border: 1px solid #FF14A1;
+}
+
+.aboutSneak button:hover {
+  background-color: #fff;
+  color: #FF14A1;
+  border: 1px solid #FF14A1;
+}
+
+.barLinks {
+  text-decoration: none;
+  color: #fff;
+}
+
+.barList {
+  width: 350px;
+  color: #fff;
+  font-size: 20px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  padding-top: 100px;
+  margin-left: 73px;
+}
+
+.cartButton {
+  position: fixed;
+  top: 100px;
+  left: 1700px;
+  color: #fff;
+  z-index: 4;
+}
+
+.cart {
+  width: 190px;
+  height: 300px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.closeBtn {
+  width: 30px;
+  height: 30px;
+  margin: 5px 0 0 155px;
+  border-radius: 50%;
+  border: 1px solid #FF14A1;
+  background-color: lightpink;
+  color: #fff;
+}

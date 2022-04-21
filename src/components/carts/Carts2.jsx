@@ -3,6 +3,7 @@ import styles from "../style.module.css";
 
 const Carts2 = () => {
   return (
+    <div className={styles.mainDivCars}>
     <div style={{marginLeft: '15px'}} className={styles.mainDivCars}>
       <div className={styles.divCarts}>
         <div>
@@ -33,6 +34,7 @@ const Carts2 = () => {
           <button className={styles.btnCarts}>Записаться на игру</button>
         </div>
       </div>
+    </div>
     </div>
   );
 };
