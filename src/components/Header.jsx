@@ -17,7 +17,7 @@ const Header = () => {
             <Link className="link" to={"/"}>
               Акции
             </Link>
-            <Link className="link" to={"/"}>
+            <Link className="link" to={"/news"}>
               Новости
             </Link>
             <Link className="link" to={"/"}>

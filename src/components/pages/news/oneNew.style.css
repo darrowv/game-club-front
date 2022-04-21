@@ -1,0 +1,118 @@
+.one__new {
+  width: 1600px;
+  background-color: rgb(119, 119, 119);
+  margin: auto;
+  height: 6200px;
+}
+.header {
+  width: 1200px;
+  margin: auto;
+  color: white;
+  font-size: 31px;
+}
+.one__new-img {
+  width: 1200px;
+  height: 600px;
+  margin: auto;
+  margin-bottom: 40px;
+}
+.one__new-img img {
+  border-radius: 10px;
+  width: 1200px;
+  height: 600px;
+  object-fit: cover;
+}
+.one__new-title {
+  padding-top: 20px;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+.new_text-text {
+  color: white;
+  font-size: 25px;
+  width: 1200px;
+  margin: auto;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+.news_hr {
+  border: 0;
+  width: 1350px;
+  height: 3px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+}
+.head_comments {
+  width: 1200px;
+  margin: auto;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  color: white;
+}
+.one_comment_info {
+  width: 1170px;
+  margin: auto;
+}
+.one_comment {
+  color: white;
+  padding: 12px;
+  height: 50px;
+  border: 1px solid white;
+}
+.add_comment {
+  width: 1000px;
+  height: 50px;
+  display: flex;
+  margin: auto;
+}
+.input_commet {
+  width: 80%;
+  height: 50px;
+}
+.input_commet input {
+  width: 80%;
+  height: 50px;
+}
+/* From uiverse.io by @adamgiebl */
+.btn_comment {
+  width: 6.5em;
+  height: 2.3em;
+  margin: 0.5em;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 0.625em;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.btn_comment:hover {
+  color: black;
+}
+
+.btn_comment:after {
+  content: "";
+  background: white;
+  position: absolute;
+  z-index: -1;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.5s;
+}
+
+.btn_comment:hover:after {
+  transform: skewX(-45deg) scale(1, 1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
