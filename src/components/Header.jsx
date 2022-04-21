@@ -16,6 +16,9 @@ const Header = () => {
             <Link className="link" to={"/"}>
               Тарифы
             </Link>
+            <Link className="link" to={"/cafe"}>
+              Бар
+            </Link>
             <Link className="link" to={"/"}>
               Акции
             </Link>
