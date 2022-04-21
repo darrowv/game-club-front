@@ -15,6 +15,7 @@ import Footer from "./Footer.jsx";
 import YandMap from "./YandMap";
 import Chat from "./Chat";
 
+
 const Main = () => {
   return (
     <>
@@ -39,10 +40,13 @@ const Main = () => {
                 <button className="titleBtn">Позвонить</button>
               </div>
             </div>
+            <div></div>
           </div>
         </div>
       </main>
       <Stock />
+
+      <Carts />
       <section className="cardsSection">
         <Carts />
       </section>

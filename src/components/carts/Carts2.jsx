@@ -3,6 +3,7 @@ import styles from "../style.module.css";
 
 const Carts2 = () => {
   return (
+    <div className={styles.mainDivCars}>
     <div style={{marginLeft: '15px'}} className={styles.mainDivCars}>
       <div className={styles.divCarts}>
         <div>
