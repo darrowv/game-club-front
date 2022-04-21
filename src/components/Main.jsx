@@ -12,9 +12,9 @@ import img6 from "./img/finding6.svg";
 import "./config.css";
 import "./pages/Arsenal/config.css";
 import Footer from './Footer.jsx'
-import Footer from "./Footer.jsx";
 import YandMap from "./YandMap";
 import Chat from "./Chat";
+import 'animate.css'
 
 const Main = () => {
   return (
@@ -25,14 +25,14 @@ const Main = () => {
         <div className="container">
           <div className="flexTitle">
             <div className="mainImgBlock">
-              <img className="titleImg" src={titleImg} alt="none" />
+              <img className="titleImg animate__animated animate__bounce" src={titleImg} alt="none" />
             </div>
             <div className="titleText">
-              <h1>
+              <h1 className="animate__animated animate__bounce">
                 Игровой клуб <br />
                 React Redux
               </h1>
-              <div className="map">
+              <div className="map animate__animated animate__bounce">
                 <YandMap />
               </div>
               <div className="buttons" style={{ display: "flex" }}>
