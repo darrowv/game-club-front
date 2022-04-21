@@ -98,7 +98,7 @@ const Footer = () => {
               </div>
               <div className="deni__number">
                 <a href="/" class="deni__link">
-                  Адаптив@ЮйЦуьн?
+                  Адаптив@ЮйЦуьн?.com
                 </a>
               </div>
             </div>
