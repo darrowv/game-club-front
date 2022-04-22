@@ -29,7 +29,7 @@ const Main = () => {
               <img className="titleImg animate__animated animate__bounce" src={titleImg} alt="none" />
             </div>
             <div className="titleText">
-              <h1 className="animate__animated animate__bounce">
+              <h1 className="titleH1 animate__animated animate__bounce">
                 Игровой клуб <br />
                 React Redux
               </h1>
