@@ -38,7 +38,7 @@ const Header = () => {
             <Link className="link" to={"/news"}>
               Новости
             </Link>
-            <Link className="link" to={"/"}>
+            <Link className="link" to={"/contacts"}>
               Контакты
             </Link>
             <Link className="link"  to={`/profile/${id}`} >

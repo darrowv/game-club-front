@@ -9,6 +9,7 @@ import SignIn from "./components/pages/SignIn";
 import SignUp from "./components/pages/SignUp";
 import Bar from "./components/pages/Bar/Bar";
 import { store } from "./redux/configureStore";
+import Contacts from "./components/pages/Contacts/Contacts";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/signin" element={<SignIn />} />
             <Route path="/profile/:id" element={<PersonalArea />} />
             <Route path="/cafe" element={<Bar />} />
+            <Route path="/contacts" element={<Contacts />} />
           </Routes>
         </BrowserRouter>
       </Provider>
