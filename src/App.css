@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 * {
   box-sizing: border-box;
@@ -7,17 +7,10 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto";
+  font-family: 'Roboto';
 }
 
-h1,
-h2,
-h3,
-h4,
-p,
-ul,
-li,
-span {
+h1, h2, h3, h4, p, ul, li, span {
   padding: 0;
   margin: 0;
   text-decoration: none;
@@ -25,7 +18,7 @@ span {
 
 .container {
   width: 1600px;
-  margin: auto;
+  margin: auto
 }
 
 header {
@@ -43,7 +36,7 @@ main {
   width: 100%;
   height: 1000px;
   background-color: gray;
-  background: linear-gradient(#700d63 0%, #ed37a4 73.44%);
+  background: linear-gradient(#700D63 0%, #ED37A4 73.44%);
   padding-top: 70px;
 }
 
@@ -72,12 +65,12 @@ main {
   height: 60px;
   text-align: center;
   box-shadow: 0px 2px 10px rgb(255 20 161 / 60%);
-  border: 3px solid #ff14a1;
+  border: 3px solid #FF14A1;
   font-weight: bold;
   font-size: 16px;
   text-transform: uppercase;
   background: rgba(177, 66, 145, 0.5);
-  color: #ffffff;
+  color: #FFFFFF;
   border-radius: 5px;
   transition: 0.4s;
 }
@@ -113,13 +106,13 @@ h1 {
   overflow: hidden;
   white-space: nowrap;
   box-shadow: 0px 2px 10px rgb(255 20 161 / 60%);
-  border: 3px solid #ff14a1;
+  border: 3px solid #FF14A1;
   font-weight: bold;
   font-size: 16px;
   text-transform: uppercase;
   background: rgba(177, 66, 145, 0.5);
   padding: 18px;
-  color: #ffffff;
+  color: #FFFFFF;
   border-radius: 5px;
 }
 
@@ -174,7 +167,7 @@ h1 {
 }
 
 .questionsSection {
-  background-color: #ed37a4;
+  background-color: #ED37A4;
   padding-top: 20px;
   padding-bottom: 80px;
 }
@@ -208,16 +201,14 @@ h1 {
   height: 40px;
   text-align: center;
   box-shadow: 0px 2px 10px rgb(255 20 161 / 60%);
-  border: 3px solid #ff14a1;
+  border: 3px solid #FF14A1;
   font-weight: bold;
   font-size: 16px;
   text-transform: uppercase;
   background: rgba(177, 66, 145, 0.5);
   color: #ffffff;
   border-radius: 5px;
-
   color: #ffffff;
-  border-radius: 50%;
 }
 
 .cardsSection {
@@ -311,7 +302,6 @@ h1 {
 .barSection {
   width: 100%;
   min-height: 1000px;
-  background-color: gray;
   background: linear-gradient(#700d63 0%, #ed37a4 73.44%);
   padding-top: 90px;
 }

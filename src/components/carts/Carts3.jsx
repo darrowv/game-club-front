@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "../style.module.css";
 
 const Carts3 = () => {
@@ -29,7 +30,7 @@ const Carts3 = () => {
             <p className={styles.quantity}>Количество мест</p>
             <p>от 1 до 15</p>
           </div>
-          <button className={styles.btnCarts}>Записаться на игру</button>
+          <Link className={styles.btnCarts} to={"/booking"} >Записаться на игру</Link>
         </div>
       </div>
     </div>

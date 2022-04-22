@@ -6,6 +6,7 @@ import {
   getUsersById,
   handleImage,
 } from "../../redux/reducers/application";
+import Footer from "../Footer";
 import Header from "../Header";
 import styles from "./Profile.module.css";
 
@@ -14,7 +15,7 @@ const PersonalArea = () => {
 
   const users = useSelector((state) => state.applicationReducer.users);
   const load = useSelector((state) => state.applicationReducer.loader);
-  console.log(load);
+
   const dispatch = useDispatch();
   const [nickName, setNickName] = useState("");
   const [file, setFile] = useState("");
@@ -31,6 +32,7 @@ const PersonalArea = () => {
   };
   const handleChange = (e) => {
     setNickName(e.target.value);
+
   };
   const avat =
     "https://c0.klipartz.com/pngpicture/684/352/gratis-png-un-golpe-hombre-saitama-anime-superheroe-un-golpe.png";
@@ -41,8 +43,8 @@ const PersonalArea = () => {
       {load ? (
         <div className="spin-wrapper">
           <div className="spinner">loading</div>
-        </div>
-      ) : (
+        </div>) : 
+       (
         <div className={styles.file__wrapper}>
           <div className={styles.img}>
             <div className={styles.input__file}>
@@ -84,6 +86,7 @@ const PersonalArea = () => {
           <div className={styles.glitch}></div>
         </div>
       )}
+      <Footer />
     </div>
   );
 };

@@ -30,16 +30,18 @@ export const applicationReducer = (state = initialState, action) => {
     case "application/image/pending":
       return {
         ...state,
+        loader: true,
       };
     case "add/image":
       return {
         ...state,
+        loader: false,
         users: action.payload,
       };
     case "application/image/rejected":
       return {
         ...state,
-
+        loader: false,
         error: null,
       };
     case "application/signup/pending":
@@ -135,7 +137,6 @@ export const handleImage = (id, file) => {
         body: formData,
       });
       const data = await res.json();
-      console.log(data);
       dispatch({ type: "add/image", payload: data });
     } catch (error) {
       dispatch({ type: "application/image/rejected" });

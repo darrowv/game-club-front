@@ -15,11 +15,11 @@
   opacity: 1.5;
 }
 .file__wrapper {
-  height: 700px;
+  min-height: 1002px;
   margin: auto;
   text-align: center;
-  background-size: 100%;
-  background-image: url(https://wallpaperaccess.com/full/676037.jpg);
+  background-color: blueviolet;
+  padding-top: 200px;
 }
 .file {
   display: none;
