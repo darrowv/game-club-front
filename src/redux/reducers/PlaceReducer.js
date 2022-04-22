@@ -27,7 +27,12 @@ export const PlaceReducer = (state = initialState, action) => {
     case "place/change/fulfilled": {
       return {
         ...state,
-        place: action.payload,
+        place:  state.place.map((item) => {
+            if(item._id === action.payload._id) {
+                item.user = !item.user
+            }
+            return item
+        }),
         load: false,
       };
     }
@@ -76,7 +81,7 @@ export const patchFetch = (id, boolean, users) => {
         body: JSON.stringify({ boolean: !boolean, user: users }),
       });
       const data = await patch_fetch.json();
-      dispatch({ type: "place/change/fulfilled", payload: id });
+      dispatch({ type: "place/change/fulfilled", payload: data });
     } catch (e) {
       dispatch({ type: "place/change/rejected", error: e.toString() });
     }
