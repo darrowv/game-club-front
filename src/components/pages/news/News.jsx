@@ -17,7 +17,7 @@ const News = () => {
    <>
    <Header />
      <div className="deni__news">
-     <h1 style={{textAlign: 'center', color: 'white'}}>Новости на сегодня</h1>
+     {/* <h1 className="newsTitle" style={{textAlign: 'center', color: 'white'}}>Новости на сегодня</h1> */}
       <div className="deni__news_content">
         {news.map((item) => {
           return (
