@@ -1,23 +1,29 @@
+body {
+  background-image: url("./background.png");
+}
+
 .page-content {
   padding-top: 150px;
-  padding-bottom: 80px;
-  background-image: url("./background.png");
   color: white;
 }
 
 .title {
- font-size: 40px;
- font-weight: 600;
- display: flex;
- justify-content: center;
+  font-size: 40px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
 }
 
 .demarcation {
   width: 300px;
   border: none;
-  height: 2px;
   color: #e81695;
   background-color: #e81695;
+}
+
+hr {
+  margin: auto;
+  opacity: 1;
 }
 
 .contacts-data ul {
@@ -38,7 +44,6 @@ li {
 
 li:hover {
   color: #e81695;
-
 }
 
 .page-content span {
@@ -51,4 +56,136 @@ li:hover {
   font-size: 18px;
   display: flex;
   justify-content: center;
+}
+
+/* ---FEEDBACK--- */
+
+.feedback {
+  width: 70%;
+  border-radius: 15px;
+  margin: 60px auto 60px auto;
+  padding: 30px 80px 30px 80px;
+  background-color: rgba(47, 49, 51, 0.738);
+  transition: 0.2s;
+}
+
+.feedback:hover {
+  transform: scale(1.05);
+}
+
+.fb-title {
+  color: white;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.inputs {
+  padding: 30px 0 30px 0;
+}
+
+.personal-data {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#email-input,
+#name-input {
+  font-size: 20px;
+  padding: 10px;
+  width: 440px;
+  outline: none;
+  border: none;
+  color: white;
+  background-color: #ff52a337;
+}
+
+#email-input::placeholder,
+#name-input::placeholder,
+#message::placeholder {
+  color: rgb(185, 185, 185);
+}
+
+#message {
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: #ff52a337;
+  font-size: 20px;
+  padding: 10px;
+  color: white;
+}
+
+.send-msg {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.send-btn {
+  height: 40px;
+  width: 200px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: 0.2s;
+  background-color: rgba(240, 248, 255, 0.618);
+}
+
+.send-btn:hover {
+  background-color: #e81694c2;
+  color: white;
+}
+
+.under-btn {
+  color: white;
+  font-size: 10px;
+}
+
+.close-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.close-btn:hover {
+  color: red;
+}
+
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.726);
+  z-index: 100;
+}
+
+.modal-window {
+  z-index: 2;
+  font-size: 35px;
+  color: white;
+  width: 80%;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: #898a9276;
+}
+
+.error-msg {
+  color: rgba(255, 0, 0, 0.668);
+  margin-bottom: 10px;
 }

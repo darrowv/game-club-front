@@ -2,6 +2,7 @@ import React from "react";
 import Footer from "../../Footer";
 import Header from "../../Header";
 import "./contacts.css";
+import FeedbackPart from "./FeedbackPart";
 
 const Contacts = () => {
   return (
@@ -40,6 +41,7 @@ const Contacts = () => {
           </div>
         </div>
       </div>
+      <FeedbackPart />
       <Footer />
     </>
   );
