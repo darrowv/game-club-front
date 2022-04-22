@@ -38,7 +38,7 @@ li {
   font-size: 30px;
   font-weight: 500;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   transition: 0.2s;
 }
 
@@ -63,7 +63,7 @@ li:hover {
 .feedback {
   width: 70%;
   border-radius: 15px;
-  margin: 60px auto 60px auto;
+  margin: 120px auto 80px auto;
   padding: 30px 80px 30px 80px;
   background-color: rgba(47, 49, 51, 0.738);
   transition: 0.2s;
