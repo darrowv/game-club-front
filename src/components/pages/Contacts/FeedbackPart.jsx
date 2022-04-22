@@ -38,10 +38,11 @@ const FeedbackPart = () => {
       {window ? (
         <div className="modal-wrapper">
           <div className="modal-window">
-            <span>
+            <p className="modal-text">
               Заявка успешно отправлена в никуда. В ближайшее время с вами никто
-              не свяжется
-            </span>
+              не свяжется.
+            </p>
+            <img className="harold" src="https://assets.omdenken.nl/afbeeldingen/_image/hidethepainharold.jpg" alt="harold" />
             <span
               onClick={() => setWindow(false)}
               class="material-symbols-outlined close-btn"
