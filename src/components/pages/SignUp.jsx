@@ -22,10 +22,11 @@ const SignUp = () => {
     dispatch(createApp(login, password));
   };
   return (
-    <>
+    <div>
       <Header />
-      <div className={styles.signUpMain}>
+      <div style={{ margin: "auto", textAlign: "center", marginTop: "150px" }}>
         <div>
+
           <h2 style={{paddingBottom: '30px', color: '#fff'}}>Регистрация</h2>
           <input
             className={styles.input1}

@@ -14,6 +14,12 @@
   text-align: center;
 }
 .btn {
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid #fbef07;
+  font-size: 20px;
+  width: 250px;
+  color: black;
+  cursor: pointer;
   width: 270px;
   height: 50px;
   text-align: center;

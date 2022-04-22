@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { auth } from "../../redux/reducers/application";
+import Header from "../Header";
+
 import styles from "./signUpIn.module.css";
 import { useNavigate } from "react-router-dom";
 import Header from "../Header";
@@ -9,6 +11,7 @@ import Footer from "../Footer";
 
 const SignIn = () => {
   const dispatch = useDispatch();
+  const id = useSelector((state) => state.applicationReducer.id);
   const navigate = useNavigate();
 
   const [login, setLogin] = useState("");
@@ -27,6 +30,10 @@ const SignIn = () => {
     navigate("/");
   };
   return (
+    <div>
+      <Header />
+
+      <div className={styles.main__div}>
     <>
       <Header />
       <div className={styles.signUpMain}>
@@ -49,6 +56,12 @@ const SignIn = () => {
             onChange={handleChangePassword}
           />
         </div>
+
+        <button className={styles.btn} onClick={handleSubmit}>
+          <Link to={`/profile/${id}`}>LOGIN</Link>
+        </button>
+      </div>
+    </div>
         <div>
           <button className={styles.btn} onClick={handleSubmit}>
             LOGIN
