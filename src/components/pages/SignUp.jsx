@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { createApp } from "../../redux/reducers/application";
-import Header from "../Header";
 import styles from "./signUpIn.module.css";
-import { Link } from "react-router-dom";
-import Footer from "../Footer";
+import Header from "../Header";
 
 const SignUp = () => {
   const dispatch = useDispatch();
@@ -26,8 +24,6 @@ const SignUp = () => {
       <Header />
       <div style={{ margin: "auto", textAlign: "center", marginTop: "150px" }}>
         <div>
-
-          <h2 style={{paddingBottom: '30px', color: '#fff'}}>Регистрация</h2>
           <input
             className={styles.input1}
             type="text"
@@ -45,16 +41,11 @@ const SignUp = () => {
             onChange={handlePassword}
           />
         </div>
-        <div>
         <button className={styles.btn} onClick={submit}>
           Зарегистрироваться
         </button>
-        </div>
-        <Link to={'/signin'} >Уже есть аккаунт?</Link>
-
       </div>
-      <Footer />
-    </>
+    </div>
   );
 };
 
