@@ -11,7 +11,6 @@ import Bar from "./components/pages/Bar/Bar";
 import { store } from "./redux/configureStore";
 import Contacts from "./components/pages/Contacts/Contacts";
 import BookingPage from "./components/carts/booking/BookingPage";
-import Contacts from "./components/pages/Contacts/Contacts";
 
 
 function App() {
@@ -30,7 +29,6 @@ function App() {
             <Route path="/cafe" element={<Bar />} />
             <Route path="/contacts" element={<Contacts />} />
             <Route path="/booking" element={<BookingPage/>}/>
-            <Route path="/contacts" element={<Contacts />} />
           </Routes>
         </BrowserRouter>
       </Provider>
