@@ -38,7 +38,7 @@ const PersonalArea = () => {
                   <label for="upload_photo">
                     <img
                       className={styles.image__profile}
-                      src={`http://localhost:6006/${users.image}`}
+                      src={`http://localhost:6006/${users.image}` ? `http://localhost:6006/${users.image}` : }
                     />
                     <input
                       id="upload_photo"
