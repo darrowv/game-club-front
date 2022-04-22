@@ -9,7 +9,9 @@ import SignIn from "./components/pages/SignIn";
 import SignUp from "./components/pages/SignUp";
 import Bar from "./components/pages/Bar/Bar";
 import { store } from "./redux/configureStore";
+import Contacts from "./components/pages/Contacts/Contacts";
 import BookingPage from "./components/carts/booking/BookingPage";
+
 
 function App() {
   const {id} = useParams()
@@ -25,6 +27,7 @@ function App() {
             <Route path="/signin" element={<SignIn />} />
             <Route path="/profile/:id" element={<PersonalArea />} />
             <Route path="/cafe" element={<Bar />} />
+            <Route path="/contacts" element={<Contacts />} />
             <Route path="/booking" element={<BookingPage/>}/>
           </Routes>
         </BrowserRouter>
