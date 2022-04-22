@@ -3,12 +3,30 @@ const initialState = {
   signUp: false,
   error: null,
   users: {},
+  loader: true,
   token: localStorage.getItem("token"),
   id: localStorage.getItem("id"),
 };
 
 export const applicationReducer = (state = initialState, action) => {
   switch (action.type) {
+    case "application/image/pending":
+      return {
+        ...state,
+        loader: true,
+      };
+    case "add/image":
+      return {
+        ...state,
+        loader: false,
+        users: action.payload,
+      };
+    case "application/image/rejected":
+      return {
+        ...state,
+        loader: false,
+        error: null,
+      };
     case "application/signup/pending":
       return {
         ...state,
@@ -82,6 +100,26 @@ export const getUsersById = (id) => {
       dispatch({ type: "application/users/rejected" });
     } else {
       dispatch({ type: "application/users/fulfilled", payload: data });
+    }
+  };
+};
+
+export const handleImage = (id, file) => {
+  return async (dispatch) => {
+    dispatch({ type: "application/image/pending" });
+
+    try {
+      const formData = new FormData();
+      formData.append("avatar", file);
+
+      const res = await fetch(`http://localhost:6006/image/${id}`, {
+        method: "PATCH",
+        body: formData,
+      });
+      const data = await res.json();
+      dispatch({ type: "add/image", payload: data });
+    } catch (error) {
+      dispatch({ type: "application/image/rejected" });
     }
   };
 };

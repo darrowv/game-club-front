@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { createApp } from "../../redux/reducers/application";
+import Header from "../Header";
 import styles from "./signUpIn.module.css";
+import { Link } from "react-router-dom";
+import Footer from "../Footer";
 
 const SignUp = () => {
   const dispatch = useDispatch();
@@ -19,29 +22,38 @@ const SignUp = () => {
     dispatch(createApp(login, password));
   };
   return (
-    <div>
-      <div>
-        <input
-          className={styles.input1}
-          type="text"
-          placeholder="type login"
-          value={login}
-          onChange={handleLogin}
-        />
+    <>
+      <Header />
+      <div className={styles.signUpMain}>
+        <div>
+          <h2 style={{paddingBottom: '30px', color: '#fff'}}>Регистрация</h2>
+          <input
+            className={styles.input1}
+            type="text"
+            placeholder="type login"
+            value={login}
+            onChange={handleLogin}
+          />
+        </div>
+        <div>
+          <input
+            className={styles.input1}
+            type="password"
+            placeholder="type password"
+            value={password}
+            onChange={handlePassword}
+          />
+        </div>
+        <div>
+        <button className={styles.btn} onClick={submit}>
+          Зарегистрироваться
+        </button>
+        </div>
+        <Link to={'/signin'} >Уже есть аккаунт?</Link>
+
       </div>
-      <div>
-        <input
-          className={styles.input1}
-          type="password"
-          placeholder="type password"
-          value={password}
-          onChange={handlePassword}
-        />
-      </div>
-      <button className={styles.btn} onClick={submit}>
-        Зарегистрироваться
-      </button>
-    </div>
+      <Footer />
+    </>
   );
 };
 

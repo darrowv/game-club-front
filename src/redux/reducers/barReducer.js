@@ -1,5 +1,7 @@
 const initialState = {
   products: [],
+  categories: [],
+  cartItems: []
 };
 
 export const barReducer = (state = initialState, action) => {
@@ -10,6 +12,18 @@ export const barReducer = (state = initialState, action) => {
         products: action.payload,
       };
 
+    case "addToCart":
+      return {
+        ...state,
+        cartItems: [
+          ...state.cartItems,
+          {
+            id: state.cartItems.length + 1,
+            productId: action.payload,
+            amount: 1
+          }
+        ]
+      }
     default:
       return state;
   }
@@ -26,3 +40,9 @@ export const getProducts = () => {
     }
   };
 };
+
+export const addToCart = () => {
+  return async dispatch => {
+    const res = await fetch('')
+  }
+}
