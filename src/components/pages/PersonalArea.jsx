@@ -9,9 +9,12 @@ const PersonalArea = () => {
   const { id } = useParams();
 
   const users = useSelector((state) => state.applicationReducer.users);
+  const load = useSelector((state) => state.applicationReducer.loader);
+
   const dispatch = useDispatch();
   const [file, setFile] = useState("");
   console.log(users);
+  console.log(file);
 
   useEffect(() => {
     dispatch(getUsersById(id));
@@ -24,43 +27,49 @@ const PersonalArea = () => {
   return (
     <div>
       <Header />
-
-      <div className={styles.file__wrapper}>
-        <div className={styles.img}>
-          <div className={styles.input__file}>
-            <div>
+      {!load ? (
+        load
+      ) : (
+        <div className={styles.file__wrapper}>
+          <div className={styles.img}>
+            <div className={styles.input__file}>
               <div>
-                <label for="upload_photo">
-                  <img
-                    className={styles.image__profile}
-                    src={`http://localhost:6006/${users.image}`}
-                  />
-                  <input
-                    id="upload_photo"
-                    className={styles.file}
-                    type="file"
-                    onChange={(e) => setFile(e.target.files[0])}
-                  />
-                </label>
+                <div>
+                  <label for="upload_photo">
+                    <img
+                      className={styles.image__profile}
+                      src={`http://localhost:6006/${users.image}`}
+                    />
+                    <input
+                      id="upload_photo"
+                      className={styles.file}
+                      type="file"
+                      onChange={(e) => setFile(e.target.files[0])}
+                    />
+                  </label>
 
-                {/* 
+                  {/* 
               <button className={styles.button1} onClick={handleClick}>
                 Изменить фото
               </button> */}
-              </div>
+                </div>
 
-              <div className={styles.container}>
-                <button className={styles.animated__word} onClick={handleClick}>
-                  GAME
-                </button>
+                <div className={styles.container}>
+                  <button
+                    className={styles.animated__word}
+                    onClick={handleClick}
+                  >
+                    GAME
+                  </button>
+                </div>
+                <p>Ваш логин: {users.login}</p>
+                <p>Ваш баланс: {users.amount}</p>
               </div>
-              <p>Ваш логин: {users.login}</p>
-              <p>Ваш баланс: {users.amount}</p>
             </div>
           </div>
+          <div className={styles.glitch}></div>
         </div>
-        <div className={styles.glitch}></div>
-      </div>
+      )}
     </div>
   );
 };
