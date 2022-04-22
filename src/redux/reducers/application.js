@@ -10,21 +10,36 @@ const initialState = {
 
 export const applicationReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "application/image/pending":
+    case "application/nick/pending":
       return {
         ...state,
         loader: true,
       };
-    case "add/image":
+    case "application/nick/fulfilled":
       return {
         ...state,
         loader: false,
         users: action.payload,
       };
-    case "application/image/rejected":
+    case "application/nick/rejected":
       return {
         ...state,
         loader: false,
+        error: action.error,
+      };
+    case "application/image/pending":
+      return {
+        ...state,
+      };
+    case "add/image":
+      return {
+        ...state,
+        users: action.payload,
+      };
+    case "application/image/rejected":
+      return {
+        ...state,
+
         error: null,
       };
     case "application/signup/pending":
@@ -72,16 +87,19 @@ export const applicationReducer = (state = initialState, action) => {
     case "application/users/pending":
       return {
         ...state,
+        loader: true,
         error: null,
       };
     case "application/users/fulfilled":
       return {
         ...state,
+        loader: false,
         users: action.payload,
       };
     case "application/users/rejected":
       return {
         ...state,
+        loader: false,
         error: action.error,
       };
     default:
@@ -117,9 +135,30 @@ export const handleImage = (id, file) => {
         body: formData,
       });
       const data = await res.json();
+      console.log(data);
       dispatch({ type: "add/image", payload: data });
     } catch (error) {
       dispatch({ type: "application/image/rejected" });
+    }
+  };
+};
+
+export const createNick = (text, id) => {
+  return async (dispatch) => {
+    dispatch({ type: "application/nick/pending" });
+
+    try {
+      const res = await fetch(`http://localhost:6006/nickname/${id}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ nickName: text }),
+      });
+      const data = await res.json();
+      dispatch({ type: "application/nick/fulfilled", payload: data });
+    } catch (e) {
+      dispatch({ type: "application/nick/rejected", error: e });
     }
   };
 };

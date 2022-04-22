@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { getUsersById, handleImage } from "../../redux/reducers/application";
+import {
+  createNick,
+  getUsersById,
+  handleImage,
+} from "../../redux/reducers/application";
 import Header from "../Header";
 import styles from "./Profile.module.css";
 
@@ -10,11 +14,10 @@ const PersonalArea = () => {
 
   const users = useSelector((state) => state.applicationReducer.users);
   const load = useSelector((state) => state.applicationReducer.loader);
-
+  console.log(load);
   const dispatch = useDispatch();
+  const [nickName, setNickName] = useState("");
   const [file, setFile] = useState("");
-  console.log(users);
-  console.log(file);
 
   useEffect(() => {
     dispatch(getUsersById(id));
@@ -23,23 +26,39 @@ const PersonalArea = () => {
   const handleClick = () => {
     dispatch(handleImage(users._id, file));
   };
+  const handleNickName = () => {
+    dispatch(createNick(nickName, users._id));
+  };
+  const handleChange = (e) => {
+    setNickName(e.target.value);
+  };
+  const avat =
+    "https://c0.klipartz.com/pngpicture/684/352/gratis-png-un-golpe-hombre-saitama-anime-superheroe-un-golpe.png";
 
   return (
     <div>
       <Header />
-      {!load ? (
-        load
+      {load ? (
+        <div className="spin-wrapper">
+          <div className="spinner">loading</div>
+        </div>
       ) : (
         <div className={styles.file__wrapper}>
           <div className={styles.img}>
             <div className={styles.input__file}>
               <div>
                 <div>
-                  <label for="upload_photo">
+                  <label htmlFor="upload_photo">
                     <img
                       className={styles.image__profile}
-                      src={`http://localhost:6006/${users.image}` ? `http://localhost:6006/${users.image}` : }
+                      src={
+                        users.image
+                          ? `http://localhost:6006/${users.image}`
+                          : avat
+                      }
                     />
+                    <input onChange={handleChange} value={nickName} />
+                    <button onClick={handleNickName}>жми шейкер</button>
                     <input
                       id="upload_photo"
                       className={styles.file}
@@ -47,11 +66,6 @@ const PersonalArea = () => {
                       onChange={(e) => setFile(e.target.files[0])}
                     />
                   </label>
-
-                  {/* 
-              <button className={styles.button1} onClick={handleClick}>
-                Изменить фото
-              </button> */}
                 </div>
 
                 <div className={styles.container}>
@@ -62,7 +76,7 @@ const PersonalArea = () => {
                     GAME
                   </button>
                 </div>
-                <p>Ваш логин: {users.login}</p>
+                <p>Ваш ник: {users.nickName}</p>
                 <p>Ваш баланс: {users.amount}</p>
               </div>
             </div>

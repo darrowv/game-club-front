@@ -84,8 +84,8 @@ main {
 
 .signIn:hover {
   background-color: #fff;
-  color: #FF14A1;
-  border: 3px solid #FF14A1;
+  color: #ff14a1;
+  border: 3px solid #ff14a1;
 }
 
 .titleImg {
@@ -125,8 +125,8 @@ h1 {
 
 .titleBtn:hover {
   background-color: lightpink;
-  border: 3px solid #ED37A4;
-  color: #ED37A4;
+  border: 3px solid #ed37a4;
+  color: #ed37a4;
 }
 
 .buttons {
@@ -156,7 +156,7 @@ h1 {
   border-radius: 5px;
   color: #fff;
   text-align: center;
-  box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.3)
+  box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.3);
 }
 
 .answer {
@@ -166,7 +166,7 @@ h1 {
   background-color: lightgray;
   border-radius: 5px;
   margin-top: 5px;
-  box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.2)
+  box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.2);
 }
 
 .block {
@@ -190,9 +190,8 @@ h1 {
   text-align: center;
   color: #fff;
   background-color: #222426;
-  border: 1px solid #700D63;
+  border: 1px solid #700d63;
   border-radius: 10px;
-  
 }
 
 /* .line {
@@ -216,13 +215,13 @@ h1 {
   background: rgba(177, 66, 145, 0.5);
   color: #ffffff;
   border-radius: 5px;
-}
-  color: #FFFFFF;
+
+  color: #ffffff;
   border-radius: 50%;
 }
 
 .cardsSection {
-  background-color: #ED37A4;
+  background-color: #ed37a4;
   padding-top: 20px;
   padding-bottom: 40px;
 }
@@ -242,7 +241,6 @@ h1 {
   border-radius: 50%;
   background-color: #222426;
   z-index: 2;
-
 }
 
 .modalImg {
@@ -273,8 +271,8 @@ h1 {
 .sendInput {
   width: 180px;
   height: 35px;
-  border: 1px solid #ED37A4;
-  color: #ED37A4;
+  border: 1px solid #ed37a4;
+  color: #ed37a4;
   border-radius: 5px;
   outline: none;
 }
@@ -284,10 +282,10 @@ h1 {
   width: 80px;
   height: 35px;
   box-shadow: 0px 2px 10px rgb(255 20 161 / 60%);
-  border: 3px solid #FF14A1;
+  border: 3px solid #ff14a1;
   text-transform: uppercase;
   background: rgba(177, 66, 145, 0.5);
-  color: #FFFFFF;
+  color: #ffffff;
   border-radius: 5px;
 }
 
@@ -314,6 +312,6 @@ h1 {
   width: 100%;
   min-height: 1000px;
   background-color: gray;
-  background: linear-gradient(#700D63 0%, #ED37A4 73.44%);
+  background: linear-gradient(#700d63 0%, #ed37a4 73.44%);
   padding-top: 90px;
 }
