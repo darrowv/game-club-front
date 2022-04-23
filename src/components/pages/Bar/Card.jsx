@@ -1,6 +1,9 @@
 import React from "react";
 
-const Card = ({ img, name, price }) => {
+const Card = ({ img, name, price, addTocart, products }) => {
+
+
+
   return (
     <>
       <div className="barCard">
@@ -12,7 +15,7 @@ const Card = ({ img, name, price }) => {
         </div>
         <div className="aboutSneak">
           <p>Цена: {price}р</p>
-          <button>Купить</button>
+          <button onClick={() => addTocart(products)}>Купить</button>
         </div>
       </div>
     </>

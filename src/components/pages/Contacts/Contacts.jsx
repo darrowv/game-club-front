@@ -19,15 +19,15 @@ const Contacts = () => {
           <hr className="demarcation"/>
           <div className="contacts-data">
             <ul>
-              <li>
+              <li className="contact">
                 <span class="material-symbols-outlined">call</span>
                 <p>+7 (999) 888-77-66</p>
               </li>
-              <li>
+              <li className="contact">
                 <span class="material-symbols-outlined">mail</span>
                 <p>game_club@mail.ru</p>
               </li>
-              <li>
+              <li className="contact">
                 <span class="material-symbols-outlined">schedule</span>
                 <p>Пн. - Вс. : круглосуточно</p>
               </li>

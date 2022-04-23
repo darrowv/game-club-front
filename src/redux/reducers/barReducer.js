@@ -1,7 +1,13 @@
 const initialState = {
   products: [],
   categories: [],
-  cartItems: []
+  cartItems: [
+    {
+      img: "http://intocode.ru/d/react-project-1/images/9.jpg",
+      name: "Уши",
+      amount: 1
+    }
+  ]
 };
 
 export const barReducer = (state = initialState, action) => {
@@ -18,8 +24,9 @@ export const barReducer = (state = initialState, action) => {
         cartItems: [
           ...state.cartItems,
           {
-            id: state.cartItems.length + 1,
-            productId: action.payload,
+            id: action.payload._id,
+            img: action.payload.img,
+            name: action.payload.name,
             amount: 1
           }
         ]
@@ -41,8 +48,8 @@ export const getProducts = () => {
   };
 };
 
-export const addToCart = () => {
-  return async dispatch => {
-    const res = await fetch('')
-  }
-}
+// export const addToCart = () => {
+//   return async dispatch => {
+//     const res = await fetch('')
+//   }
+// }

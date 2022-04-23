@@ -21,7 +21,7 @@ body {
   background-color: #e81695;
 }
 
-hr {
+.page-content hr, .feedback hr {
   margin: auto;
   opacity: 1;
 }
@@ -34,7 +34,7 @@ hr {
   margin-bottom: 50px;
 }
 
-li {
+.contacts-data li {
   font-size: 30px;
   font-weight: 500;
   display: flex;
@@ -42,7 +42,7 @@ li {
   transition: 0.2s;
 }
 
-li:hover {
+.contacts-data li:hover {
   color: #e81695;
 }
 
