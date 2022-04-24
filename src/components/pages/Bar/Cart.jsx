@@ -51,7 +51,7 @@ const Cart = () => {
                 {!cartItems.length ? (<div className="empty-cart">Корзина пуста</div>) : null}
                 {cartItems.map((item) => {
                   return (
-                    <li className="cart-item">
+                    <li key={item.id} className="cart-item">
                       <div style={{display: "flex", alignItems: "center"}}> 
                         <div>
                           <img

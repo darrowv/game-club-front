@@ -19,8 +19,6 @@ const Search = () => {
     return item.name.toLowerCase().includes(value.toLowerCase());
   });
 
-  console.log(products);
-
   return (
     <div>
       <header className="barHeader">
