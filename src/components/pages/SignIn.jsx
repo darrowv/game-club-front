@@ -25,7 +25,6 @@ const SignIn = () => {
   };
   return (
     <div>
-      <Header />
 
       <div className={styles.main__div}>
         <div>

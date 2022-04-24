@@ -17,6 +17,7 @@ const PcPage = () => {
   const handlePlace = (i, boolean, id) => {
     dispatch(patchFetch(i, boolean, id));
   };
+
   return (
     <>
       <div className="booking_main">
@@ -28,7 +29,7 @@ const PcPage = () => {
           {place.map((item) => {
             return (
               <div className="place_wind">
-                <div
+                <button
                   className={item.user ? "place" : "place_check"}
                   onClick={(e) =>
                     item.user
@@ -37,7 +38,7 @@ const PcPage = () => {
                   }
                 >
                   {item.name}
-                </div>
+                </button>
               </div>
             );
           })}

@@ -21,7 +21,6 @@ const SignUp = () => {
   };
   return (
     <div>
-      <Header />
       <div style={{ margin: "auto", textAlign: "center", marginTop: "150px" }}>
         <div>
           <input
