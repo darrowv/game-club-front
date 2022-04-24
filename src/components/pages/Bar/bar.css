@@ -85,6 +85,20 @@ body {
   border-radius: 5px;
 }
 
+.aboutSneak button:hover {
+  background-color: #fff;
+  color: #ff14a1;
+  border: 1px solid #ff14a1;
+}
+
+.aboutSneak button:disabled {
+  background-color: #66264fb8;
+  box-shadow: none;
+  color: white;
+  border: none;
+  opacity: 0.8;
+}
+
 .barContant {
   width: 1400px;
   margin: auto;
@@ -107,12 +121,6 @@ body {
 }
 
 .barFind:hover {
-  background-color: #fff;
-  color: #ff14a1;
-  border: 1px solid #ff14a1;
-}
-
-.aboutSneak button:hover {
   background-color: #fff;
   color: #ff14a1;
   border: 1px solid #ff14a1;
@@ -199,11 +207,13 @@ body {
 
 .item-name {
   font-size: 20px;
+  font-weight: 500;
   margin: 0 10px 0 10px;
 }
 
 .item-amount {
   font-size: 20px;
+  font-weight: 500;
   display: flex;
   align-items: center;
 }
