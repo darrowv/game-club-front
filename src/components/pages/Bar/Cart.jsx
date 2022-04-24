@@ -66,7 +66,7 @@ const Cart = () => {
                         <button className="decrease" onClick={() => decreaseAmount(item)}>-</button>
                         <span className="amount-number">{item.amount}</span>
                         <button className="increase" onClick={() => increaseAmount(item)}>+</button>
-                        <span className="material-symbols-outlined remove-item" onClick={() => removeFromCart(item.id)}>delete</span>
+                        <span className="remove-item material-symbols-outlined" onClick={() => removeFromCart(item.id)}>delete</span>
                       </div>
                     </li>
                   );

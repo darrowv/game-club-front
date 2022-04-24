@@ -1,15 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
   box-sizing: border-box;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
 }
 
 body {
   margin: 0;
   padding: 0;
 }
-
 
 .barHeader {
   align-items: center;
@@ -21,7 +20,7 @@ body {
   width: 400px;
   height: 40px;
   border-radius: 5px;
-  border: 1px solid #FF14A1;
+  border: 1px solid #ff14a1;
   box-shadow: 0 0 8px 3px rgba(105, 104, 104, 0.1);
   margin-left: 115px;
   padding: 5px;
@@ -68,7 +67,6 @@ body {
 .barIcons {
   width: 250px;
   border-radius: 10px;
-
 }
 
 .aboutSneak {
@@ -80,10 +78,10 @@ body {
   width: 220px;
   height: 40px;
   box-shadow: 0px 2px 10px rgb(255 20 161 / 60%);
-  border: 1px solid #FF14A1;
+  border: 1px solid #ff14a1;
   text-transform: uppercase;
   background: rgba(177, 66, 145, 0.5);
-  color: #FFFFFF;
+  color: #ffffff;
   border-radius: 5px;
 }
 
@@ -100,24 +98,24 @@ body {
   width: 120px;
   height: 40px;
   box-shadow: 0px 2px 10px rgb(255 20 161 / 60%);
-  border: 1px solid #FF14A1;
+  border: 1px solid #ff14a1;
   text-transform: uppercase;
   background: rgba(177, 66, 145, 0.5);
-  color: #FFFFFF;
+  color: #ffffff;
   border-radius: 5px;
   margin-left: 10px;
 }
 
 .barFind:hover {
   background-color: #fff;
-  color: #FF14A1;
-  border: 1px solid #FF14A1;
+  color: #ff14a1;
+  border: 1px solid #ff14a1;
 }
 
 .aboutSneak button:hover {
   background-color: #fff;
-  color: #FF14A1;
-  border: 1px solid #FF14A1;
+  color: #ff14a1;
+  border: 1px solid #ff14a1;
 }
 
 .barLinks {
@@ -141,18 +139,36 @@ body {
 .cartButton {
   position: relative;
   margin-right: 115px;
-  cursor: pointer;
+}
+
+.empty-cart {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
+  margin: 30px;
 }
 
 .cart {
   position: absolute;
   top: 60px;
   right: 30px;
-  width: 400px;
-  min-height: 100px;
+  width: 500px;
+  max-height: 400px;
   background-color: #fff;
   border-radius: 5px;
-  opacity: 0.9;
+  overflow-y: scroll;
+}
+
+.cart::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+  background-color: #7a1958;
+}
+
+.cart::-webkit-scrollbar-thumb {
+  background-color: #ba4f91;
+  border-radius: 9em;
+  box-shadow: inset 1px 1px 10px #f3faf7;
 }
 
 .cart-items-list {
@@ -163,7 +179,6 @@ body {
 .cart-item {
   margin-top: 25px;
   margin-right: 20px;
-  border-bottom: 1px solid grey;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -173,34 +188,53 @@ body {
 }
 
 .cart-item:hover {
-  box-shadow: 1px 1px 1px 1px grey;
+  box-shadow: 0 0 6px 1px #ff14a1;
   border-radius: 5px;
 }
 
 .item-img {
-  width: 30px;
+  width: 50px;
+  border-radius: 10px;
 }
 
 .item-name {
-  font-size: 18px;
+  font-size: 20px;
   margin: 0 10px 0 10px;
 }
 
 .item-amount {
-  font-size: 18px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.remove-item {
+  padding-left: 10px;
+}
+
+.item-amount .material-symbols-outlined {
+  font-size: 27px;
+}
+
+.remove-item:hover {
+  color: #ff14a1;
 }
 
 .amount-number {
   padding: 0 10px 0 10px;
 }
 
-.increase, .decrease {
-  font-size: 20px;
-  cursor: pointer;
+.increase,
+.decrease {
+  font-size: 25px;
+  padding: 0 10px;
+  border: none;
+  border-radius: 5px;
 }
 
-.increase:hover, .decrease:hover {
-  color: #FF14A1;
+.increase:hover,
+.decrease:hover {
+  color: #ff14a1;
 }
 
 .closeBtn {
@@ -208,6 +242,6 @@ body {
   top: 5px;
   right: 5px;
   font-size: 50px;
-  color: #FF14A1;
+  color: #ff14a1;
   cursor: pointer;
 }
