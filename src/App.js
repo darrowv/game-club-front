@@ -11,6 +11,7 @@ import Bar from "./components/pages/Bar/Bar";
 import { store } from "./redux/configureStore";
 import Contacts from "./components/pages/Contacts/Contacts";
 import BookingPage from "./components/carts/booking/BookingPage";
+import ScrollToTop from "./components/ScrollToTop";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
     <>
       <Provider store={store}>
         <BrowserRouter>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Main />} />
             <Route path='/news' element={<News/>}/>
