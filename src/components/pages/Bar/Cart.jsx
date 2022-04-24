@@ -26,6 +26,8 @@ const Cart = () => {
 
   const removeFromCart = (id) => {
     dispatch({ type: "removeFromCart", payload: id })
+    dispatch({ type: "removed", payload: id })
+    
   }
 
   return (

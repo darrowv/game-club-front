@@ -10,16 +10,16 @@ const Search = () => {
 
   const products = useSelector((state) => state.barReducer.products);
 
-
-  const addToСart = (product) => {
+  function handleAddToCart(product) {
     dispatch({ type: "addToCart", payload: product })
-    product.inCart = !product.inCart
+    dispatch({ type: "added", payload: product })
   }
   
-
   const filteredItems = products.filter((item) => {
     return item.name.toLowerCase().includes(value.toLowerCase());
   });
+
+  console.log(products);
 
   return (
     <div>
@@ -57,8 +57,8 @@ const Search = () => {
                 name={product.name}
                 img={product.img}
                 price={product.price}
-                addToСart={addToСart}
-                products={product}
+                product={product}
+                handleAddToCart={handleAddToCart}
               />
             );
           })}

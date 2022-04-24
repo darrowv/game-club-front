@@ -26,10 +26,34 @@ export const barReducer = (state = initialState, action) => {
         ],
       }
 
+    case "added":
+      return {
+        ...state,
+        products: state.products.map((prod) => {
+          if(prod._id === action.payload._id) {
+            prod.inCart = true
+            return prod
+          }
+          return prod
+        })
+      }
+
     case "removeFromCart":
       return {
         ...state,
         cartItems: state.cartItems.filter((item) => item.id !== action.payload),
+      }
+
+    case "removed":
+      return {
+        ...state,
+        products: state.products.map((prod) => {
+          if(prod._id === action.payload) {
+            prod.inCart = false
+            return prod
+          }
+          return prod
+        })
       }
   
     case "increaseAmount":
@@ -74,8 +98,3 @@ export const getProducts = () => {
   };
 };
 
-// export const addToCart = () => {
-//   return async dispatch => {
-//     const res = await fetch('')
-//   }
-// }

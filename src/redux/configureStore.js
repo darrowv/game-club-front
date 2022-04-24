@@ -9,7 +9,8 @@ import { barReducer } from "./reducers/barReducer";
 import { PlaceReducer } from "./reducers/PlaceReducer";
 import { PsReducer } from "./reducers/PsReduser";
 import { VipReducer } from "./reducers/VipReducer";
+import { composeWithDevTools } from "redux-devtools-extension";
 
 const combineReducer = combineReducers({ categoryReducer, messageReducer, barReducer, applicationReducer, NewsReducer, CommentsReducer, PlaceReducer, PsReducer, VipReducer });
 
-export const store = createStore(combineReducer, applyMiddleware(thunk));
+export const store = createStore(combineReducer, composeWithDevTools(applyMiddleware(thunk)));
