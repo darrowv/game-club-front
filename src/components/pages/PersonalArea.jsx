@@ -64,8 +64,8 @@ const PersonalArea = () => {
                             : avat
                         }
                       />
-                      <input onChange={handleChange} value={nickName} />
-                      <button onClick={handleNickName}>жми шейкер</button>
+                      <input className={styles.profileInput} onChange={handleChange} value={nickName} />
+                      <button className={styles.profileButton} onClick={handleNickName}>жми шейкер</button>
                       <input
                         id="upload_photo"
                         className={styles.file}
@@ -86,6 +86,7 @@ const PersonalArea = () => {
                   <p>Ваш ник: {users.nickName}</p>
                   <p>Ваш баланс: {users.amount}</p>
                 </div>
+                <h1>Забронировано вами:</h1>
                 <div className="personal_booking">
                   <div className="personal_pc">
                     <PcBooking />
