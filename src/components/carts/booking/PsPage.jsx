@@ -26,16 +26,17 @@ const PsPage = () => {
           {place.map((item) => {
             return (
               <div className="place_wind">
-                <div
+                <button
                   className={item.user ? "place" : "place_check"}
                   onClick={(e) =>
                     item.user
                       ? handlePlace(item._id, item.boolean, null)
                       : handlePlace(item._id, item.boolean, id)
                   }
+                  
                 >
                   {item.name}
-                </div>
+                </button>
               </div>
             );
           })}
