@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import cart from "./img/cart.png";
 
 const Cart = () => {
   const [open, setOpen] = useState(false);
+  const dispatch = useDispatch()
 
   const cartItems = useSelector((state) => state.barReducer.cartItems);
 
@@ -11,12 +12,20 @@ const Cart = () => {
     setOpen(!open);
   };
 
-  const increaseAmount = (amount) => {
-    return amount++
+  const increaseAmount = (item) => {
+    if(item.amount < 20) {
+      dispatch({ type: "increaseAmount", payload: item })
+    }
   }
 
-  const decreaseAmount = (amount) => {
-    return amount ? amount-- : null
+  const decreaseAmount = (item) => {
+    if(item.amount > 1) {
+      dispatch({ type: "decreaseAmount", payload: item })
+    }
+  }
+
+  const removeFromCart = (id) => {
+    dispatch({ type: "removeFromCart", payload: id })
   }
 
   return (
@@ -37,6 +46,7 @@ const Cart = () => {
             </span>
             <div className="cart-items">
               <ul className="cart-items-list">
+                {!cartItems.length ? (<div className="empty-cart">Корзина пуста</div>) : null}
                 {cartItems.map((item) => {
                   return (
                     <li className="cart-item">
@@ -51,9 +61,10 @@ const Cart = () => {
                         <div className="item-name">{item.name}</div>
                       </div>
                       <div className="item-amount">
-                        <span className="decrease" onClick={() => decreaseAmount(item.amount)}>-</span>
+                        <button className="decrease" onClick={() => decreaseAmount(item)}>-</button>
                         <span className="amount-number">{item.amount}</span>
-                        <span className="increase" onClick={() => increaseAmount(item.amount)}>+</span>
+                        <button className="increase" onClick={() => increaseAmount(item)}>+</button>
+                        <span className="material-symbols-outlined remove-item" onClick={() => removeFromCart(item.id)}>delete</span>
                       </div>
                     </li>
                   );

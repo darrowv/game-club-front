@@ -10,8 +10,10 @@ const Search = () => {
 
   const products = useSelector((state) => state.barReducer.products);
 
-  const addTocart = (product) => {
+
+  const addToСart = (product) => {
     dispatch({ type: "addToCart", payload: product })
+    product.inCart = !product.inCart
   }
   
 
@@ -48,15 +50,15 @@ const Search = () => {
           </ul>
         </div>
         <div className="cardsMain">
-          {filteredItems.map((products) => {
+          {filteredItems.map((product) => {
             return (
               <Card
-                key={products._id}
-                name={products.name}
-                img={products.img}
-                price={products.price}
-                addTocart={addTocart}
-                products={products}
+                key={product._id}
+                name={product.name}
+                img={product.img}
+                price={product.price}
+                addToСart={addToСart}
+                products={product}
               />
             );
           })}
