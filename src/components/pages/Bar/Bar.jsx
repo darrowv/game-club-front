@@ -4,7 +4,6 @@ import Search from "./Search";
 import "./bar.css";
 import { useDispatch } from "react-redux";
 import { getProducts } from "../../../redux/reducers/barReducer";
-import Cart from "./Cart";
 import Footer from "../../Footer";
 
 const Bar = () => {
@@ -19,7 +18,6 @@ const Bar = () => {
       <Header />
       <section className="barSection">
         <div>
-          <Cart />
           <Search />
           <Footer />
         </div>

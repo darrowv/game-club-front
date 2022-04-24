@@ -1,13 +1,20 @@
 import React, { useState } from "react";
 import Card from "./Card";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import Cart from "./Cart";
 
 const Search = () => {
   const [value, setValue] = useState("");
+  const dispatch = useDispatch()
 
   const products = useSelector((state) => state.barReducer.products);
 
+  function handleAddToCart(product) {
+    dispatch({ type: "addToCart", payload: product })
+    dispatch({ type: "added", payload: product })
+  }
+  
   const filteredItems = products.filter((item) => {
     return item.name.toLowerCase().includes(value.toLowerCase());
   });
@@ -24,6 +31,7 @@ const Search = () => {
           />
           <button className="barFind">НАЙТИ</button>
         </div>
+        <Cart />
       </header>
       <div className="barContant">
         <div>
@@ -40,13 +48,15 @@ const Search = () => {
           </ul>
         </div>
         <div className="cardsMain">
-          {filteredItems.map((products) => {
+          {filteredItems.map((product) => {
             return (
               <Card
-                key={products._id}
-                name={products.name}
-                img={products.img}
-                price={products.price}
+                key={product._id}
+                name={product.name}
+                img={product.img}
+                price={product.price}
+                product={product}
+                handleAddToCart={handleAddToCart}
               />
             );
           })}

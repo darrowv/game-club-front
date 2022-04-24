@@ -48,6 +48,7 @@ const Main = () => {
       <Slider />
       <Stock />
       <section className="cardsSection">
+        <a name="tariffs"></a>
         <Carts />
       </section>
       <section className="finding">

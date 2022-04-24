@@ -3,7 +3,9 @@ import "./stock.style.css";
 
 const Stock = () => {
   return (
+    
     <div className="stock">
+      <a name="stock"></a>
       <h1 className="deni__stock_title">Акции</h1>
       <div className="promos__list">
         <img

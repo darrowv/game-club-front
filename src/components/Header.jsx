@@ -25,15 +25,15 @@ const Header = () => {
             <Link className="link" to={"/"}>
               Главная
             </Link>
-            <Link className="link" to={"/"}>
+            <a className="link" href="/#tariffs">
               Тарифы
-            </Link>
+            </a>
             <Link className="link" to={"/cafe"}>
               Бар
             </Link>
-            <Link className="link" to={"/"}>
+            <a className="link" href="/#stock">
               Акции
-            </Link>
+            </a>
             <Link className="link" to={"/news"}>
               Новости
             </Link>
