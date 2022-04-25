@@ -12,7 +12,6 @@ const VipPage = () => {
   }, [dispatch]);
 
   const place = useSelector((state) => state.VipReducer.place);
-
   const handlePlace = (i, boolean, id) => {
     dispatch(patchVip(i, boolean, id));
   };
@@ -28,6 +27,7 @@ const VipPage = () => {
             return (
               <div className="place_wind">
                 <button
+                disabled={item.user && id !== item.user ? true : false}
                   className={item.user ? "place" : "place_check"}
                   onClick={() =>
                     item.user

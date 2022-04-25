@@ -28,8 +28,9 @@ const initialState = {
         return {
           ...state,
           place:  state.place.map((item) => {
-              if(item._id === action.payload._id) {
-                  item.user = !item.user
+              if(item._id === action.payload.id) {
+                  item.user = action.payload.users
+                  return item
               }
               return item
           }),
@@ -60,7 +61,6 @@ const initialState = {
         dispatch({ type: "vip/fetch/pending" });
         const res = await fetch(`http://localhost:6006/vip`);
         const json = await res.json();
-        console.log(res);
   
         dispatch({ type: "vip/fetch/fulfilled", payload: json });
       } catch (e) {
@@ -80,7 +80,7 @@ const initialState = {
           body: JSON.stringify({ boolean: !boolean, user: users }),
         });
         const data = await patch_fetch.json();
-        dispatch({ type: "vip/change/fulfilled", payload: data });
+        dispatch({ type: "vip/change/fulfilled", payload: {users, id} });
       } catch (e) {
         dispatch({ type: "vip/change/rejected", error: e.toString() });
       }
