@@ -27,7 +27,7 @@ const PersonalArea = () => {
 
   useEffect(() => {
     dispatch(getUsersById(id));
-  }, [dispatch]);
+  }, [dispatch, id]);
 
   const handleClick = () => {
     dispatch(handleImage(users._id, file));
@@ -63,6 +63,7 @@ const PersonalArea = () => {
                             ? `http://localhost:6006/${users.image}`
                             : avat
                         }
+                        alt='none'
                       />
                       <input className={styles.profileInput} onChange={handleChange} value={nickName} />
                       <button className={styles.profileButton} onClick={handleNickName}>жми шейкер</button>
