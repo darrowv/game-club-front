@@ -29,6 +29,7 @@ function App() {
             <Route path="/signin" element={<SignIn />} />
             <Route path="/profile/:id" element={<PersonalArea />} />
             <Route path="/cafe" element={<Bar />} />
+            <Route path="/cafe/:categoryId" element={<Bar />} />
             <Route path="/contacts" element={<Contacts />} />
             <Route path="/booking" element={<BookingPage/>}/>
           </Routes>

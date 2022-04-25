@@ -1,22 +1,27 @@
 import React, { useState } from "react";
 import Card from "./Card";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Cart from "./Cart";
 
 const Search = () => {
   const [value, setValue] = useState("");
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
+  const { categoryId } = useParams();
 
   const products = useSelector((state) => state.barReducer.products);
 
   function handleAddToCart(product) {
-    dispatch({ type: "addToCart", payload: product })
-    dispatch({ type: "added", payload: product })
+    dispatch({ type: "addToCart", payload: product });
+    dispatch({ type: "added", payload: product });
   }
-  
+
   const filteredItems = products.filter((item) => {
-    return item.name.toLowerCase().includes(value.toLowerCase());
+    if (!categoryId) {
+      return item.name.toLowerCase().includes(value.toLowerCase());
+    }
+
+    return item.categoryId === Number(categoryId)
   });
 
   return (
@@ -36,13 +41,16 @@ const Search = () => {
       <div className="barContant">
         <div>
           <ul className="barList">
-            <Link className="barLinks" to={"/"}>
+            <Link className="barLinks" to={"/cafe"}>
+              Все
+            </Link>
+            <Link className="barLinks" to={"/cafe/2"}>
               Напитки
             </Link>
-            <Link className="barLinks" to={"/"}>
+            <Link className="barLinks" to={"/cafe/1"}>
               Шоколад
             </Link>
-            <Link className="barLinks" to={"/"}>
+            <Link className="barLinks" to={"/cafe/3"}>
               Снэки
             </Link>
           </ul>

@@ -11,7 +11,7 @@ const Bar = () => {
 
   useEffect(() => {
     dispatch(getProducts());
-  });
+  }, [dispatch]);
 
   return (
     <>
