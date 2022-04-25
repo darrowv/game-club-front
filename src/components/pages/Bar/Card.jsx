@@ -1,7 +1,6 @@
 import React from "react";
 
 const Card = ({ img, name, price, handleAddToCart, product }) => {
-
   return (
     <>
       <div className="barCard">
@@ -13,7 +12,12 @@ const Card = ({ img, name, price, handleAddToCart, product }) => {
         </div>
         <div className="aboutSneak">
           <p>Цена: {price}р</p>
-          <button onClick={() => handleAddToCart(product)} disabled={!product.inCart ? false : true}>{!product.inCart ? "Купить" : "В корзине"}</button>
+          <button
+            onClick={() => handleAddToCart(product)}
+            disabled={!product.inCart ? false : true}
+          >
+            {!product.inCart ? "Купить" : "В корзине"}
+          </button>
         </div>
       </div>
     </>

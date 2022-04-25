@@ -3,15 +3,14 @@ import Card from "./Card";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import Cart from "./Cart";
-import notfound from "./img/notfound.gif"
+import notfound from "./img/notfound.gif";
 
 const Search = () => {
   const [value, setValue] = useState("");
   const dispatch = useDispatch();
   const { categoryId } = useParams();
-  const [sort, setSort] = useState(false)
-  const [sortUp, setSortUp] = useState(false)
-  const [sortDown, setSortDown] = useState(false)
+  const [sortUp, setSortUp] = useState(false);
+  const [sortDown, setSortDown] = useState(false);
 
   const products = useSelector((state) => state.barReducer.products);
 
@@ -21,18 +20,16 @@ const Search = () => {
   }
 
   const sortToMax = () => {
-    dispatch({ type: "sortToMax" })
-    setSort(!sort)
-    setSortUp(true)
-    setSortDown(false)
-  }
+    dispatch({ type: "sortToMax" });
+    setSortUp(true);
+    setSortDown(false);
+  };
 
   const sortToMin = () => {
-    dispatch({ type: "sortToMin" })
-    setSort(!sort)
-    setSortDown(true)
-    setSortUp(false)
-  }
+    dispatch({ type: "sortToMin" });
+    setSortDown(true);
+    setSortUp(false);
+  };
 
   const filteredItems = products.filter((item) => {
     if (!categoryId) {
@@ -41,8 +38,7 @@ const Search = () => {
     if (item.categoryId === Number(categoryId)) {
       return item.name.toLowerCase().includes(value.toLowerCase());
     }
-
-    return null
+    return null;
   });
 
   return (
@@ -98,18 +94,20 @@ const Search = () => {
             <div className="notfound">
               <img src={notfound} className="notfound-img" alt="pulp-fiction" />
             </div>
-          ) : filteredItems.map((product) => {
-            return (
-              <Card
-                key={product._id}
-                name={product.name}
-                img={product.img}
-                price={product.price}
-                product={product}
-                handleAddToCart={handleAddToCart}
-              />
-            );
-          })}
+          ) : (
+            filteredItems.map((product) => {
+              return (
+                <Card
+                  key={product._id}
+                  name={product.name}
+                  img={product.img}
+                  price={product.price}
+                  product={product}
+                  handleAddToCart={handleAddToCart}
+                />
+              );
+            })
+          )}
         </div>
       </div>
     </div>

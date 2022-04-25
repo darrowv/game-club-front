@@ -21,7 +21,8 @@ body {
   background-color: #e81695;
 }
 
-.page-content hr, .feedback hr {
+.page-content hr,
+.feedback hr {
   margin: auto;
   opacity: 1;
 }
