@@ -30,6 +30,7 @@ const PcPage = () => {
             return (
               <div className="place_wind">
                 <button
+                 disabled={item.user && id !== item.user ? true : false}
                   className={item.user ? "place" : "place_check"}
                   onClick={(e) =>
                     item.user

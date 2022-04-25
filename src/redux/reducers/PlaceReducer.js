@@ -28,8 +28,9 @@ export const PlaceReducer = (state = initialState, action) => {
       return {
         ...state,
         place:  state.place.map((item) => {
-            if(item._id === action.payload._id) {
-                item.user = !item.user
+            if(item._id === action.payload.id) {
+                item.user = action.payload.users
+                return item
             }
             return item
         }),
@@ -56,12 +57,10 @@ export const PlaceReducer = (state = initialState, action) => {
 
 export const loadPlace = () => {
   return async (dispatch) => {
-    console.log(123);
     try {
       dispatch({ type: "place/fetch/pending" });
       const res = await fetch(`http://localhost:6006/place`);
       const json = await res.json();
-      console.log(res);
 
       dispatch({ type: "place/fetch/fulfilled", payload: json });
     } catch (e) {
@@ -81,7 +80,7 @@ export const patchFetch = (id, boolean, users) => {
         body: JSON.stringify({ boolean: !boolean, user: users }),
       });
       const data = await patch_fetch.json();
-      dispatch({ type: "place/change/fulfilled", payload: data });
+      dispatch({ type: "place/change/fulfilled", payload: {users, id} });
     } catch (e) {
       dispatch({ type: "place/change/rejected", error: e.toString() });
     }
