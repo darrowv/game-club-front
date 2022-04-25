@@ -133,7 +133,7 @@ body {
 }
 
 .barList {
-  width: 350px;
+  width: 650px;
   color: #fff;
   font-size: 20px;
   list-style: none;
@@ -143,6 +143,40 @@ body {
   padding: 0;
   padding-top: 100px;
   margin-left: 73px;
+}
+
+.barList li {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.notfound {
+  margin-top: 30px;
+}
+
+.notfound-img {
+  width: 400px;
+  border-radius: 20px;
+  opacity: 0.5;
+}
+
+.barList li button:hover {
+  color: #0d6efd;
+  cursor: pointer;
+}
+
+.barList li button {
+  margin-left: 8px;
+  border: none;
+  outline: none;
+  background: none;
+  color: white;
+}
+
+.barList li button:disabled {
+  color: #0d6efd;
+  cursor: auto;
 }
 
 .cartButton {

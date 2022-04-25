@@ -4,7 +4,7 @@ import cart from "./img/cart.png";
 
 const Cart = () => {
   const [open, setOpen] = useState(false);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const cartItems = useSelector((state) => state.barReducer.cartItems);
 
@@ -13,22 +13,21 @@ const Cart = () => {
   };
 
   const increaseAmount = (item) => {
-    if(item.amount < 20) {
-      dispatch({ type: "increaseAmount", payload: item })
+    if (item.amount < 20) {
+      dispatch({ type: "increaseAmount", payload: item });
     }
-  }
+  };
 
   const decreaseAmount = (item) => {
-    if(item.amount > 1) {
-      dispatch({ type: "decreaseAmount", payload: item })
+    if (item.amount > 1) {
+      dispatch({ type: "decreaseAmount", payload: item });
     }
-  }
+  };
 
   const removeFromCart = (id) => {
-    dispatch({ type: "removeFromCart", payload: id })
-    dispatch({ type: "removed", payload: id })
-    
-  }
+    dispatch({ type: "removeFromCart", payload: id });
+    dispatch({ type: "removed", payload: id });
+  };
 
   return (
     <>
@@ -48,11 +47,13 @@ const Cart = () => {
             </span>
             <div className="cart-items">
               <ul className="cart-items-list">
-                {!cartItems.length ? (<div className="empty-cart">Корзина пуста</div>) : null}
+                {!cartItems.length ? (
+                  <div className="empty-cart">Корзина пуста</div>
+                ) : null}
                 {cartItems.map((item) => {
                   return (
                     <li key={item.id} className="cart-item">
-                      <div style={{display: "flex", alignItems: "center"}}> 
+                      <div style={{ display: "flex", alignItems: "center" }}>
                         <div>
                           <img
                             className="item-img"
@@ -63,10 +64,25 @@ const Cart = () => {
                         <div className="item-name">{item.name}</div>
                       </div>
                       <div className="item-amount">
-                        <button className="decrease" onClick={() => decreaseAmount(item)}>-</button>
+                        <button
+                          className="decrease"
+                          onClick={() => decreaseAmount(item)}
+                        >
+                          -
+                        </button>
                         <span className="amount-number">{item.amount}</span>
-                        <button className="increase" onClick={() => increaseAmount(item)}>+</button>
-                        <span className="remove-item material-symbols-outlined" onClick={() => removeFromCart(item.id)}>delete</span>
+                        <button
+                          className="increase"
+                          onClick={() => increaseAmount(item)}
+                        >
+                          +
+                        </button>
+                        <span
+                          className="remove-item material-symbols-outlined"
+                          onClick={() => removeFromCart(item.id)}
+                        >
+                          delete
+                        </span>
                       </div>
                     </li>
                   );

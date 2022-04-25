@@ -16,7 +16,7 @@ const Contacts = () => {
       <div className="page-content">
         <div className="contacts">
           <div className="title">КОНТАКТЫ</div>
-          <hr className="demarcation"/>
+          <hr className="demarcation" />
           <div className="contacts-data">
             <ul>
               <li className="contact">

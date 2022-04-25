@@ -2,36 +2,36 @@ import React, { useState } from "react";
 
 const FeedbackPart = () => {
   const [window, setWindow] = useState(false);
-  const [empty, setEmptyField] = useState(false)
-  const [msgText, setMsgText] = useState("")
-  const [nameText, setNameText] = useState("")
-  const [emailText, setEmailText] = useState("")
+  const [empty, setEmptyField] = useState(false);
+  const [msgText, setMsgText] = useState("");
+  const [nameText, setNameText] = useState("");
+  const [emailText, setEmailText] = useState("");
 
   const handleMsgText = (e) => {
-    setMsgText(e.target.value)
-    setEmptyField('')
-  }
+    setMsgText(e.target.value);
+    setEmptyField("");
+  };
 
   const handleNameText = (e) => {
-    setNameText(e.target.value)
-    setEmptyField('')
-  }
+    setNameText(e.target.value);
+    setEmptyField("");
+  };
 
   const handleEmailText = (e) => {
-    setEmailText(e.target.value)
-    setEmptyField('')
-  }
+    setEmailText(e.target.value);
+    setEmptyField("");
+  };
 
   const handleClick = () => {
     if (!msgText || !nameText || !emailText) {
-      return setEmptyField(true)
-    } 
-    setWindow(true)
-    setEmailText('')
-    setMsgText('')
-    setNameText('')
-    setEmptyField('')
-  }
+      return setEmptyField(true);
+    }
+    setWindow(true);
+    setEmailText("");
+    setMsgText("");
+    setNameText("");
+    setEmptyField("");
+  };
 
   return (
     <>
@@ -42,7 +42,11 @@ const FeedbackPart = () => {
               Заявка успешно отправлена в никуда. В ближайшее время с вами никто
               не свяжется.
             </p>
-            <img className="harold" src="https://assets.omdenken.nl/afbeeldingen/_image/hidethepainharold.jpg" alt="harold" />
+            <img
+              className="harold"
+              src="https://assets.omdenken.nl/afbeeldingen/_image/hidethepainharold.jpg"
+              alt="harold"
+            />
             <span
               onClick={() => setWindow(false)}
               class="material-symbols-outlined close-btn"
@@ -92,7 +96,7 @@ const FeedbackPart = () => {
           </button>
           {empty ? (
             <div className="error-msg">*Необходимо заполнить все поля</div>
-          ): null}
+          ) : null}
           <p className="under-btn">
             Нажимая кнопку отправить, вы соглашаетесь с тем, что потратили свое
             время впустую
