@@ -59,6 +59,14 @@ main {
 .link {
   text-decoration: none;
   color: #fff;
+  transition: 0.5s;
+  padding: 0 10px;
+}
+
+.link:hover {
+  background-color: #ED37A4;
+  color: #fff;
+  transform: scale(1.1);
 }
 
 .signIn {
@@ -310,4 +318,10 @@ h1 {
 
 .titleH1 {
   font-size: 60px;
+  
+}
+
+.map {
+  border-radius: 5px;
+  box-shadow: 0 0 8px 3px rgba(1, 1, 1, 0.2);
 }

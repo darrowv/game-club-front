@@ -4,14 +4,15 @@
   padding: 0;
 }
 .booking_main {
+  margin-top: 150px;
   width: 100%;
-  height: 700px;
+  height: 800px;
   display: flex;
   justify-content: space-between;
 }
 .place_cart {
   width: 50%;
-  height: 500px;
+  height: 700px;
   margin: auto;
   background-color: rgba(0, 0, 0, 0.726);
   display: flex;
@@ -55,7 +56,6 @@
 
 .booking {
   width: 100%;
-  height: 100vh;
   display: flex;
   justify-content: space-between;
   background-image: url("https://phonoteka.org/uploads/posts/2021-05/1621919788_19-phonoteka_org-p-fon-s-kalashom-19.jpg");
@@ -73,11 +73,12 @@
   width: 190px;
   margin: auto;
   background-color: inherit;
+  padding-bottom: 50px;
 }
 .bron {
   width: 100%;
   background-color: #000000;
-  padding-top: 6%;
+
 }
 .booking_button button {
   width: 200px;

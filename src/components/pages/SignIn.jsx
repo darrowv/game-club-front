@@ -24,32 +24,37 @@ const SignIn = () => {
     dispatch(auth(login, password));
   };
   return (
-    <div>
-
-      <div className={styles.main__div}>
-        <div>
-          <input
-            className={styles.input1}
-            type="text"
-            placeholder="type login"
-            value={login}
-            onChange={handleChangeLogin}
-          />
+    <>
+      <Header />
+      <div>
+        <div style={{ margin: "auto", textAlign: "center", paddingTop: "150px" }}>
+          <div>
+            <input
+              className={styles.input1}
+              type="text"
+              placeholder="type login"
+              value={login}
+              onChange={handleChangeLogin}
+            />
+          </div>
+          <div>
+            <input
+              className={styles.input1}
+              type="password"
+              placeholder="type password"
+              value={password}
+              onChange={handleChangePassword}
+            />
+          </div>
+          <button className={styles.btn} onClick={handleSubmit}>
+            <Link to={`/profile/${id}`}>LOGIN</Link>
+          </button>
+          <div>
+            <Link to={"/signup"}>Впервые на нашем сайте?</Link>
+          </div>
         </div>
-        <div>
-          <input
-            className={styles.input1}
-            type="password"
-            placeholder="type password"
-            value={password}
-            onChange={handleChangePassword}
-          />
-        </div>
-        <button className={styles.btn} onClick={handleSubmit}>
-          <Link to={`/profile/${id}`}>LOGIN</Link>
-        </button>
       </div>
-    </div>
+    </>
   );
 };
 

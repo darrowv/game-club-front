@@ -13,13 +13,14 @@ import VipBooking from "../carts/booking/VipBooking";
 import Footer from "../Footer";
 import Header from "../Header";
 import styles from "./Profile.module.css";
-import "./presonalB.css"
+import "./presonalB.css";
 
 const PersonalArea = () => {
   const { id } = useParams();
 
   const users = useSelector((state) => state.applicationReducer.users);
   const load = useSelector((state) => state.applicationReducer.loader);
+  console.log(users);
 
   const dispatch = useDispatch();
   const [nickName, setNickName] = useState("");
@@ -27,7 +28,7 @@ const PersonalArea = () => {
 
   useEffect(() => {
     dispatch(getUsersById(id));
-  }, [dispatch, id]);
+  }, [dispatch]);
 
   const handleClick = () => {
     dispatch(handleImage(users._id, file));
@@ -63,10 +64,9 @@ const PersonalArea = () => {
                             ? `http://localhost:6006/${users.image}`
                             : avat
                         }
-                        alt='none'
+                        alt="none"
                       />
-                      <input className={styles.profileInput} onChange={handleChange} value={nickName} />
-                      <button className={styles.profileButton} onClick={handleNickName}>жми шейкер</button>
+
                       <input
                         id="upload_photo"
                         className={styles.file}
@@ -74,30 +74,51 @@ const PersonalArea = () => {
                         onChange={(e) => setFile(e.target.files[0])}
                       />
                     </label>
-                  </div>
 
-                  <div className={styles.container}>
+                    <div className={styles.container}>
+                      <div
+                        className={styles.animated__word}
+                        onClick={handleClick}
+                      >
+                        Изменить фото
+                      </div>
+                    </div>
+                  </div>
+                  <div className={styles.nickName__div}>
+                    <input
+                      placeholder="Введите желаемый ник, Милорд!"
+                      className={styles.nickName__input}
+                      onChange={handleChange}
+                      value={nickName}
+                    />
+                  </div>
+                  <div className={styles.buttonNickName}>
                     <button
-                      className={styles.animated__word}
-                      onClick={handleClick}
+                      className={`${styles.btn3} ${styles.custom__btn}`}
+                      onClick={handleNickName}
                     >
-                      GAME
+                      <span>Изменить ник</span>
                     </button>
                   </div>
-                  <p>Ваш ник: {users.nickName}</p>
+
+                  <p style={{display: 'flex', alignItems: 'center'}}>Ваш ник: <span className={styles.userName} >{users.nickName}</span></p>
                   <p>Ваш баланс: {users.amount}</p>
                 </div>
                 <h1>Забронировано вами:</h1>
                 <div className="personal_booking">
+                
                   <div className="personal_pc">
+                    <div><h4 style={{fontSize: '14px'}}>Обычный зал</h4></div>
                     <PcBooking />
                   </div>
 
                   <div className="personal_pc">
+                  <div><h4 style={{fontSize: '14px'}}>PS зал</h4></div>
                     <PsBooking />
                   </div>
 
                   <div className="personal_pc">
+                  <div><h4 style={{fontSize: '14px'}}>VIP зал</h4></div>
                     <VipBooking />
                   </div>
                 </div>

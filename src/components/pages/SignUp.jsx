@@ -2,12 +2,15 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { createApp } from "../../redux/reducers/application";
 import styles from "./signUpIn.module.css";
+import Link from "react-scroll/modules/components/Link";
 import Header from "../Header";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const dispatch = useDispatch();
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate()
 
   const handleLogin = (e) => {
     setLogin(e.target.value);
@@ -18,10 +21,13 @@ const SignUp = () => {
 
   const submit = () => {
     dispatch(createApp(login, password));
+    navigate('/')
   };
   return (
-    <div>
-      <div style={{ margin: "auto", textAlign: "center", marginTop: "150px" }}>
+    <>
+    <Header />
+      <div>
+      <div style={{ margin: "auto", textAlign: "center", paddingTop: "150px" }}>
         <div>
           <input
             className={styles.input1}
@@ -43,8 +49,12 @@ const SignUp = () => {
         <button className={styles.btn} onClick={submit}>
           Зарегистрироваться
         </button>
+        <div>
+        <Link className="" to={'/signin'}>Уже есть аккаунт?</Link>
+        </div>
       </div>
     </div>
+    </>
   );
 };
 

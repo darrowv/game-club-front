@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { loadVip, patchVip } from "../../../redux/reducers/VipReducer";
 import "./booking.css";
+import gf from './img/vip.jpg'
 
 const VipPage = () => {
   const id = localStorage.getItem("id");
@@ -20,6 +21,9 @@ const VipPage = () => {
       <div className="booking_main">
         {" "}
         <div className="place_cart">
+        <div>
+        <img width={'260px'} style={{paddingBottom: '20px'}} src={gf} alt="" />
+        </div>
         <div className="zal">
             <h1>VIP</h1>
           </div>

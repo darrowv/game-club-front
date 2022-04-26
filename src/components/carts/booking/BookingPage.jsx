@@ -14,16 +14,15 @@ const BookingPage = () => {
   return (
     <>
       <Header />
-      <div className="bron">
-        <div className="booking_button">
-          <button onClick={() => booking()} >Забронировать</button>
-        </div>
-      </div>
-
       <div className="booking">
         <PcPage />
         <PsPage />
         <VipPage />
+      </div>
+      <div className="bron">
+        <div className="booking_button">
+          <button onClick={() => booking()} >Забронировать</button>
+        </div>
       </div>
       <Footer />
     </>

@@ -60,6 +60,9 @@
 .one_comment_info {
   width: 1170px;
   margin: auto;
+  margin-top: 10px;
+  background-color: #222426;
+  color: #fff;
 }
 .one_comment {
   color: white;
@@ -72,19 +75,25 @@
   height: 50px;
   display: flex;
   margin: auto;
+  padding-bottom: 100px;
 }
 .input_commet {
   width: 80%;
   height: 50px;
+  align-items: center;
 }
 .input_commet input {
   width: 80%;
   height: 50px;
+  padding-left: 10px;
+  border: 0;
+  border-radius: 5px;
+  outline: none;
 }
 /* From uiverse.io by @adamgiebl */
 .btn_comment {
   width: 6.5em;
-  height: 2.3em;
+  height: 2.6em;
   margin: 0.5em;
   background: black;
   color: white;

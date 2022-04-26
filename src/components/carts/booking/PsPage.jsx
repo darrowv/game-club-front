@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { loadPs, patchPs } from "../../../redux/reducers/PsReduser";
 import "./booking.css";
+import gf from './img/ps4.jpg'
 
 const PsPage = () => {
   const id = localStorage.getItem("id");
@@ -20,6 +21,9 @@ const PsPage = () => {
       <div className="booking_main">
         {" "}
         <div className="place_cart">
+        <div>
+        <img width={'260px'} style={{paddingBottom: '20px'}} src={gf} alt="" />
+        </div>
           <div className="zal">
             <h1>PlayStation</h1>
           </div>

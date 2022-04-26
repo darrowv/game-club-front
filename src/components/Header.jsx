@@ -8,19 +8,21 @@ const Header = () => {
   
   const auth = useSelector((state) => state.applicationReducer.signIn);
 
+  const token = useSelector(state => state.applicationReducer.token)
+
   const handleOut = () => {
     if (!auth) {
       localStorage.clear();
     }
   };
 
-  const logText = auth ? "ВОЙТИ" : "ВЫЙТИ";
+  const logText = !token ? "ВОЙТИ" : "ВЫЙТИ";
 
   return (
     <header>
       <div className="container">
         <div style={{ display: "flex", alignItems: "center"}}>
-          <span className="logo">LOGO</span>
+          <span className="logo">R&R</span>
           <ul className="list">
             <Link className="link" to={"/"}>
               Главная
@@ -46,7 +48,7 @@ const Header = () => {
           </ul>
           <Link to={"/signin"}>
             <button onClick={handleOut} className="signIn">
-              {logText}
+              {token ? 'ВЫЙТИ' : 'ВОЙТИ'}
             </button>
           </Link>
         </div>

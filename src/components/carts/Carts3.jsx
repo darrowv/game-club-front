@@ -30,7 +30,7 @@ const Carts3 = () => {
             <p className={styles.quantity}>Количество мест</p>
             <p>от 1 до 15</p>
           </div>
-          <Link className={styles.btnCarts} to={"/booking"} >Записаться на игру</Link>
+          <Link to={"/booking"} ><button className={styles.btnCarts}>Записаться на игру</button></Link>
         </div>
       </div>
     </div>
