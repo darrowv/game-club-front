@@ -15,6 +15,7 @@ import Footer from './Footer.jsx'
 import YandMap from "./YandMap";
 import 'animate.css'
 import Slider from "./Slider";
+import { Link } from "react-router-dom";
 
 const Main = () => {
   return (
@@ -35,8 +36,12 @@ const Main = () => {
                 <YandMap />
               </div>
               <div className="buttons" style={{ display: "flex" }}>
-                <button className="titleBtn">Перейти к брони</button>
-                <button className="titleBtn">Позвонить</button>
+                <button className="titleBtn">
+                  <Link className="to-booking-page" to={"/booking"}>Перейти к брони</Link>
+                </button>
+                <button className="titleBtn">
+                  <Link className="to-contacts-page" to={"/contacts"}>Связаться</Link>
+                </button>
               </div>
             </div>
             <div></div>

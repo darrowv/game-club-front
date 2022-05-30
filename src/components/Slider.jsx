@@ -1,7 +1,6 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./slider.css"
 import pc from "./img/pc1.jpg";
 import pc2 from "./img/2.jpg";
 import ps from "./img/ps2.jpg";

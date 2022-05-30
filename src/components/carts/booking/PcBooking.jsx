@@ -6,7 +6,6 @@ const PcBooking = () => {
     const place = useSelector((state) => state.PlaceReducer.place);
     const id = localStorage.getItem("id");
 
-
     const dispatch = useDispatch();
 
     useEffect(() => {

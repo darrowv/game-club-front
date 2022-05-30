@@ -45,6 +45,7 @@ main {
   color: #fff;
   font-size: 60px;
   font-weight: bold;
+  cursor: default;
 }
 
 .list {
@@ -124,6 +125,15 @@ h1 {
   padding: 18px;
   color: #FFFFFF;
   border-radius: 5px;
+}
+
+.to-booking-page, .to-contacts-page {
+  color: inherit;
+  text-decoration: none;
+}
+
+.to-booking-page:hover, .to-contacts-page:hover {
+  color: #ed37a4;
 }
 
 .titleBtn:hover {

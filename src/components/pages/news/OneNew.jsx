@@ -14,6 +14,7 @@ const OneNew = () => {
   const id = useParams().id;
   const news = useSelector((state) => state.NewsReducer.news);
   const comms = useSelector((state) => state.CommentsReducer.comments);
+
   useEffect(() => {
     dispatch(fetchNews());
   }, [dispatch]);
@@ -41,7 +42,6 @@ const OneNew = () => {
     }
   };
 
-  const users = useSelector(state => state.applicationReducer.users)
   return (
     <>
     <Header />
@@ -67,11 +67,12 @@ const OneNew = () => {
                       if (item.news === id) {
                         return (
                           <div className="one_comment_info" key={item._id}>
-                            <span>User</span>
+                            <span>John Doe</span>
                             <div className="one_comment">{item.text}</div>
                           </div>
                         );
                       }
+                      return null
                     })}
                     <div className="add_comment">
                       <div className="input_commet">
@@ -93,6 +94,7 @@ const OneNew = () => {
               </div>
             );
           }
+          return null
         })}
       </div>
     </>

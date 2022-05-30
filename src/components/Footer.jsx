@@ -1,6 +1,6 @@
 import React from "react";
 import "./footer.style.css";
-import { BsInstagram, BsWhatsapp, BsFillTelephoneFill } from "react-icons/bs";
+import { BsFillTelephoneFill } from "react-icons/bs";
 import { FaTelegramPlane } from "react-icons/fa";
 import {FiMail} from 'react-icons/fi'
 const Footer = () => {
@@ -47,18 +47,6 @@ const Footer = () => {
                     </a>
                   </li>
                 </ul>
-                <div className="footer-social">
-                  <li className="social-icon">
-                    <a href="https://whatsapp.com/" className="social">
-                      <BsWhatsapp size={50} />
-                    </a>
-                  </li>
-                  <li className="social-icon">
-                    <a href="https://www.instagram.com/" className="social">
-                      <BsInstagram size={50} />
-                    </a>
-                  </li>
-                </div>
               </div>
             </div>
             <div className="footer-col__center">

@@ -8,7 +8,7 @@
 }
 
 .footer__top {
-  width: 1440px;
+  width: 90%;
   margin: auto;
   padding-top: 70px;
   padding-bottom: 70px;
@@ -16,13 +16,16 @@
 }
 
 .deni__wrapper {
-  width: 1440px;
+  width: 100%;
+  margin: auto;
 }
 
 .footer-top__box {
   display: flex;
-  width: 1360px;
+  width: 90%;
   margin: auto;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .footer-col {
@@ -39,7 +42,6 @@
 
 .footer-nav__box .footer-nav li a {
   font-weight: bold;
-  margin-right: 30px;
   font-size: 18px;
   text-transform: uppercase;
   color: #ffffff;
@@ -86,10 +88,6 @@
 
 .social:hover {
   color: black;
-}
-
-.js-img {
-  margin-top: 40px;
 }
 
 .footer-col__center {
