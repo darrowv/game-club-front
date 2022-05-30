@@ -40,6 +40,8 @@ const OneNew = () => {
       setValue("");
     }
   };
+
+  const users = useSelector(state => state.applicationReducer.users)
   return (
     <>
     <Header />
@@ -65,6 +67,7 @@ const OneNew = () => {
                       if (item.news === id) {
                         return (
                           <div className="one_comment_info" key={item._id}>
+                            <span>User</span>
                             <div className="one_comment">{item.text}</div>
                           </div>
                         );
@@ -79,10 +82,11 @@ const OneNew = () => {
                           placeholder="Добавить комментарий"
                           value={value}
                         />
-                      </div>
-                      <button className="btn_comment" onClick={handleClick}>
+                        <button className="btn_comment" onClick={handleClick}>
                         Добавить
                       </button>
+                      </div>
+                      
                     </div>
                   </div>
                 </div>

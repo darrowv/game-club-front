@@ -1,5 +1,5 @@
 import { Provider } from "react-redux";
-import { BrowserRouter, Route, Routes, useParams } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Main from "./components/Main";
 import News from "./components/pages/news/News";
@@ -15,7 +15,6 @@ import ScrollToTop from "./components/ScrollToTop";
 
 
 function App() {
-  const {id} = useParams()
   return (
     <>
       <Provider store={store}>

@@ -1,14 +1,14 @@
 @font-face {
   font-family: "CyberPunkFont";
-
   src: url("./fonts/Cyberpunk-Regular.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
 .image__profile {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
+  object-fit: cover;
 }
 .image__profile:hover {
   background-color: gray;
@@ -18,8 +18,9 @@
   min-height: 1002px;
   margin: auto;
   text-align: center;
-  background-color: blueviolet;
+  background: black;
   padding-top: 200px;
+  padding-bottom: 50px;
 }
 .file {
   display: none;
@@ -50,15 +51,14 @@
 .animated__word {
   margin-top: 50px;
   font-family: Helvetica;
-  letter-spacing: 0.4em;
   font-weight: 600;
   font-size: 20px;
-
   text-align: center;
-  color: #fbef07;
+  color: #FF14A1;
   cursor: pointer;
   max-width: 100px;
   width: 100%;
+  height: 100;
   outline: 3px solid;
   outline-color: rgba(71, 126, 232, 0.5);
   outline-offset: 70px;
@@ -67,6 +67,7 @@
 .animated__word {
   border: none;
   background-color: rgba(71, 126, 232, 0);
+  text-align: center;
 }
 .animated__word:hover {
   color: rgba(71, 126, 232, 0.7);
@@ -80,10 +81,130 @@
   outline: none;
   margin-left: 10px;
 }
+.nickName__input {
+  width: 300px;
+  height: 65px;
+  border-radius: 5px;
+  margin-left: 29px;
+  padding: 10px;
+}
+.nickName__div {
+  outline: none;
+  margin-left: 10px;
+  text-align: left;
+  align-items: left;
+}
 
 .profileButton {
   border: 0;
   height: 33.5px;
   margin-left: 10px;
   padding: 0 5px;
+}
+.custom__btn {
+  margin-left: 40px;
+  width: 30px;
+  height: 20px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+.buttonNickName {
+  margin-top: 20px;
+  margin-right: 20px;
+  font-family: "Lato", sans-serif;
+  text-align: left;
+}
+.btn3 {
+  background: rgb(0, 172, 238, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 172, 238, 0) 0%,
+    rgba(2, 126, 251, 0) 100%
+  );
+  font-family: "Lato", sans-serif;
+
+  width: 300px;
+  height: 60px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  color: #FF14A1;
+  padding: 10px;
+}
+.btn3 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  height: 100%;
+}
+.btn3:before,
+.btn3:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  background: rgba(2, 126, 251, 1);
+  transition: all 0.3s ease;
+}
+.btn3:before {
+  height: 0%;
+  width: 2px;
+}
+.btn3:after {
+  width: 0%;
+  height: 2px;
+}
+.btn3:hover {
+  background: transparent;
+  box-shadow: none;
+}
+.btn3:hover:before {
+  height: 100%;
+}
+.btn3:hover:after {
+  width: 100%;
+}
+.btn3 span:hover {
+  color: rgba(2, 126, 251, 1);
+}
+.btn3 span:before,
+.btn3 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  background: rgba(2, 126, 251, 1);
+  transition: all 0.3s ease;
+}
+.btn3 span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn3 span:after {
+  width: 0%;
+  height: 2px;
+}
+.btn3 span:hover:before {
+  height: 100%;
+}
+.btn3 span:hover:after {
+  width: 100%;
+}
+
+.userName {
+  color: #FF14A1;
+  margin-left: 10px;
 }

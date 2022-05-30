@@ -6,6 +6,11 @@ import PsPage from "./PsPage";
 import VipPage from "./VipPage";
 
 const BookingPage = () => {
+
+  const booking = () => {
+    return alert("Забронировано") 
+  }
+  
   return (
     <>
       <Header />
@@ -14,7 +19,12 @@ const BookingPage = () => {
         <PsPage />
         <VipPage />
       </div>
-      <Footer/>
+      <div className="bron">
+        <div className="booking_button">
+          <button onClick={() => booking()} >Забронировать</button>
+        </div>
+      </div>
+      <Footer />
     </>
   );
 };
