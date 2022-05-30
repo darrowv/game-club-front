@@ -9,11 +9,10 @@ import img1 from "./img/finding1.svg";
 import img2 from "./img/finding2.svg";
 import img5 from "./img/finding5.svg";
 import img6 from "./img/finding6.svg";
-import "./config.css";
+import "./pages/Arsenal/config.css";
 import "./pages/Arsenal/config.css";
 import Footer from './Footer.jsx'
 import YandMap from "./YandMap";
-import Chat from "./Chat";
 import 'animate.css'
 import Slider from "./Slider";
 
@@ -21,7 +20,6 @@ const Main = () => {
   return (
     <>
       <Header />
-      <Chat />
       <main>
         <div className="container">
           <div className="flexTitle">
