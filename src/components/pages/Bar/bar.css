@@ -11,24 +11,25 @@ body {
 }
 
 .barHeader {
+  width: 85%;
+  margin: auto;
   align-items: center;
   display: flex;
   justify-content: space-between;
+  margin-top: 30px;
 }
 
 .barInput {
-  width: 400px;
+  width: 500px;
   height: 40px;
   border-radius: 5px;
   border: 1px solid #ff14a1;
   box-shadow: 0 0 8px 3px rgba(105, 104, 104, 0.1);
-  margin-left: 305px;
   padding: 5px;
   outline: none;
 }
 
 .cardsMain {
-  width: 1500px;
   display: flex;
   flex-wrap: wrap;
   margin-left: 75px;
@@ -101,7 +102,7 @@ body {
 }
 
 .barContant {
-  width: 1400px;
+  width: 90%;
   margin: auto;
 }
 
@@ -141,7 +142,7 @@ body {
   justify-content: space-between;
   margin: 0;
   padding: 0;
-  padding-top: 100px;
+  padding-top: 30px;
   margin-left: 73px;
 }
 
@@ -179,9 +180,18 @@ body {
   cursor: auto;
 }
 
+.cart-btn-wrapper {
+  position: fixed;
+  right: 110px;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.564);
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+}
+
 .cartButton {
   position: relative;
-  margin-right: 115px;
 }
 
 .empty-cart {
@@ -197,7 +207,7 @@ body {
   right: 30px;
   width: 500px;
   max-height: 400px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.852);
   border-radius: 5px;
   overflow-y: scroll;
 }

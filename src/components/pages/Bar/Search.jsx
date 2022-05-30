@@ -43,7 +43,7 @@ const Search = () => {
 
   return (
     <div>
-      <header className="barHeader">
+      <div className="barHeader">
         <div>
           <input
             placeholder="Введите наименование"
@@ -54,7 +54,7 @@ const Search = () => {
           <button className="barFind">НАЙТИ</button>
         </div>
         <Cart />
-      </header>
+      </div>
       <div className="barContant">
         <div>
           <ul className="barList">

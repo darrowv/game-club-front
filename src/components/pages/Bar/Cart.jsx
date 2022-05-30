@@ -35,6 +35,7 @@ const Cart = () => {
         rel="stylesheet"
         href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
       />
+      <div className="cart-btn-wrapper">
       <div className="cartButton">
         <img onClick={handleOpen} width={"60px"} src={cart} alt="" />
         {open && (
@@ -91,6 +92,7 @@ const Cart = () => {
             </div>
           </div>
         )}
+      </div>
       </div>
     </>
   );
