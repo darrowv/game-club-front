@@ -49,5 +49,5 @@ https://github.com/MG-LS
 
 <hr>
 
-Ссылка на страницу в heroku: [http://localhost:3000](http://localhost:3000)
+Ссылка на страницу в heroku: [gameclubtp.herokuapp.com]([http://localhost:3000](https://gameclubtp.herokuapp.com/))
 
