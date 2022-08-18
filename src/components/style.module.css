@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap");
 .mainDivCars {
   width: 500px;
   height: 700px;
@@ -28,7 +27,6 @@
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 2.5px;
-  font-family: "Roboto", sans-serif;
 }
 .h1Cart {
   margin: 10px;
@@ -36,25 +34,21 @@
   font-size: 20px;
   line-height: 1.35;
   font-weight: 600;
-  font-family: "Roboto", sans-serif;
 }
 .textAbout {
   color: #ffffff;
   font-size: 14px;
   line-height: 18px;
   margin-top: 8px;
-  font-family: "Roboto", sans-serif;
   margin: 10px;
 }
 .about {
   font-weight: 100;
-  font-family: "Roboto", sans-serif;
   color: rgba(235, 235, 235, 0.8);
   margin-bottom: 20px;
 }
 .quantity {
   font-weight: 600;
-  font-family: "Roboto", sans-serif;
 }
 .btnCarts {
   display: inline-block;

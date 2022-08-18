@@ -2,12 +2,12 @@
 
 * {
   box-sizing: border-box;
+  font-family: 'Roboto';
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto';
 }
 
 h1, h2, h3, h4, p, ul, li, span {
@@ -198,7 +198,6 @@ h1 {
   margin: auto;
   margin-top: 50px;
   margin-bottom: 40px;
-  font-family: "YS Text Regular";
   font-size: 32px;
   text-align: center;
   color: #fff;

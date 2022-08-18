@@ -1,5 +1,3 @@
-@import url("//db.onlinewebfonts.com/c/23a02e8af5ef33a9b496dd524401550f?family=YS+Text+Regular");
-
 .stock {
     margin: auto;
     padding-top: 30px;
@@ -12,7 +10,6 @@
     padding-top: 40px !important;
     margin-bottom: 40px !important;
     margin: auto;
-    font-family: "YS Text Regular";
     font-size: 32px;
     text-align: center;
     color: white;
@@ -41,7 +38,6 @@
 .promo__title {
     color: #d5d6d7;
     margin-top: 18px;
-    font-family: "YS Text Regular";
     margin-bottom: 15px;
     font-size: 25px;
 }
@@ -51,11 +47,9 @@
     width: 340px;
     color: #b4b4b7;
     margin-bottom: 40px;
-    font-family: "YS Text Regular";
 }
 
 .promo__date {
     color: #828998;
-    font-family: "YS Text Regular";
     font-size: 14px;
 }
