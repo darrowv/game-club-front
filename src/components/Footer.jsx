@@ -10,15 +10,6 @@ const Footer = () => {
         <div className="deni__wrapper">
           <div className="footer-top__box">
             <div className="footer-col footer-col__nav">
-              <div className="footer-logo">
-                <a href="/">
-                  <img
-                    src="https://cyberteka.ru/wp-content/uploads/2020/03/logo-footer.svg"
-                    alt="logo"
-                    className="js-img"
-                  />
-                </a>
-              </div>
               <div className="footer-nav__box">
                 <ul className="footer-nav">
                   <li className="main-nav-list__item">
@@ -73,7 +64,7 @@ const Footer = () => {
                 </a>
               </div>
               <div className="deni__number">
-                <a href="/" class="deni__link">
+                <a href="/" className="deni__link">
                   +7(999)999-99-99
                 </a>
               </div>
@@ -85,7 +76,7 @@ const Footer = () => {
                 </a>
               </div>
               <div className="deni__number">
-                <a href="/" class="deni__link">
+                <a href="/" className="deni__link">
                   Адаптив@ЮйЦуьн?.com
                 </a>
               </div>

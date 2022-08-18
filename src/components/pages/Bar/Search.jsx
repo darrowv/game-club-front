@@ -1,18 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import Cart from "./Cart";
-import notfound from "./img/notfound.gif";
+import { getProducts } from "../../../redux/reducers/barReducer";
+import Skeleton from "./Skeleton";
 
 const Search = () => {
-  const [value, setValue] = useState("");
   const dispatch = useDispatch();
   const { categoryId } = useParams();
+  const [searchValue, setSearchValue] = useState("");
   const [sortUp, setSortUp] = useState(false);
   const [sortDown, setSortDown] = useState(false);
 
   const products = useSelector((state) => state.barReducer.products);
+
+  useEffect(() => {
+    dispatch(getProducts());
+  }, []);
+
 
   function handleAddToCart(product) {
     dispatch({ type: "addToCart", payload: product });
@@ -33,13 +39,17 @@ const Search = () => {
 
   const filteredItems = products.filter((item) => {
     if (!categoryId) {
-      return item.name.toLowerCase().includes(value.toLowerCase());
+      return item.name.toLowerCase().includes(searchValue.toLowerCase());
     }
     if (item.categoryId === Number(categoryId)) {
-      return item.name.toLowerCase().includes(value.toLowerCase());
+      return item.name.toLowerCase().includes(searchValue.toLowerCase());
     }
     return null;
   });
+
+  const skeletons = [...new Array(8)].map((_, index) => (
+    <Skeleton key={index} />
+  ));
 
   return (
     <div>
@@ -49,7 +59,7 @@ const Search = () => {
             placeholder="Введите наименование"
             className="barInput"
             type="text"
-            onChange={(e) => setValue(e.target.value)}
+            onChange={(e) => setSearchValue(e.target.value)}
           />
           <button className="barFind">НАЙТИ</button>
         </div>
@@ -73,14 +83,14 @@ const Search = () => {
             <li>
               Упорядочить по цене
               <button
-                class="material-symbols-outlined"
+                className="material-symbols-outlined"
                 onClick={sortToMax}
                 disabled={!sortUp ? false : true}
               >
                 arrow_upward
               </button>
               <button
-                class="material-symbols-outlined"
+                className="material-symbols-outlined"
                 onClick={sortToMin}
                 disabled={!sortDown ? false : true}
               >
@@ -91,9 +101,7 @@ const Search = () => {
         </div>
         <div className="cardsMain">
           {!filteredItems.length ? (
-            <div className="notfound">
-              <img src={notfound} className="notfound-img" alt="pulp-fiction" />
-            </div>
+            skeletons
           ) : (
             filteredItems.map((product) => {
               return (

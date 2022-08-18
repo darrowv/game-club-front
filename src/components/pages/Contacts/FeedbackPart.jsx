@@ -49,7 +49,7 @@ const FeedbackPart = () => {
             />
             <span
               onClick={() => setWindow(false)}
-              class="material-symbols-outlined close-btn"
+              className="material-symbols-outlined close-btn"
             >
               cancel
             </span>
